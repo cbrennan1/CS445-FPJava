@@ -16,7 +16,7 @@ java --version
 ```
 wget https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz -P /tmp
 sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
-sudo ln -s /opt/apache-maven-3.6.3 /opt/maven
+sudo ln -s /opt/apache-maven-3.8.5 /opt/maven
 ```
 
 3. Set up Enviornment Variables for Maven
@@ -29,8 +29,8 @@ Once the file is open you need to append the following into it.
 ```
 export JAVA_HOME=/lib/jvm/java-17-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
-export M2_HOME=/opt/maven
-export MAVEN_HOME=/opt/maven
+export M2_HOME=/opt/apache-maven-3.8.5
+export MAVEN_HOME=/opt/apache-maven-3.8.5
 export PATH=${M2_HOME}/bin:${PATH}
 ```
 
@@ -38,7 +38,6 @@ Change permissions and load enviornment variables
 ```
 sudo chmod +x /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
-sudo apt install maven
 mvn -version
 mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeArtifactId=java-simple -DarchetypeVersion=4.0.0-beta.1 
 
