@@ -41,13 +41,11 @@ sudo chmod +x /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
 mvn -version
 mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeArtifactId=java-simple -DarchetypeVersion=4.0.0-beta.1 
-
-4. Install Tomcat Apache Server
 ```
-wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
-sudo mkdir /opt/tomcat
-sudo tar -xf apache-tomcat-10.0.20.tar.gz -C /opt/tomcat
-sudo /opt/tomcat/apache-tomcat-10.0.20/bin/startup.sh
+
+4. Install Postman
+```
+sudo snap install postman
 ```
 
 5. Install Github and Clone Repo
