@@ -14,8 +14,8 @@ public class accounts {
     private String phone;
     private String picture;
     private boolean is_active;
-    private Date date_created;
-    // private String date_created;
+  //private Date date_created;
+    private String date_created;
     //private String message;
 
     /*
@@ -23,7 +23,7 @@ public class accounts {
 
     }
 */
-    public accounts(String uid, String name, String address, String street, int zip, String phone, String picture, boolean is_active, Date date_created ) {//, String message) {
+    public accounts(String uid, String name, String address, String street, int zip, String phone, String picture, boolean is_active, String date_created) {
         this.uid = uid;
         this.name = name;
         this.address = address;
@@ -61,7 +61,7 @@ public class accounts {
     public boolean getIs_active() {
         return is_active;
     }
-    public Date getDate_created() {
+    public String date_created() {
         return date_created;
     }
    /* public String getMessage() {
