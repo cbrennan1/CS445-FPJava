@@ -16,9 +16,15 @@ public class AccountController {
     private final AtomicLong counter = new AtomicLong();
 
     @GetMapping("/bn/api/accounts")
-    public accounts getAccounts () {
-        accounts accounts = new accounts("<uid0>", "Virgil Bistriceanu", "10 West", "31st ST", 60616, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
-        return accounts;
+    public List<accounts> getAccounts () {
+        accounts a0 = new accounts("<uid0>", "Virgil Bistriceanu", "10 West", "31st ST", 60616, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
+        accounts a1 = new accounts("<uid0>", "Virgil Bistriceanu", "10 West", "31st ST", 60616, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
+        accounts a2 = new accounts("<uid0>", "Virgil Bistriceanu", "10 West", "31st ST", 60616, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
+        List<accounts> list = new ArrayList<>();
+        list.add(a0);
+        list.add(a1);
+        list.add(a2);
+        return list;
     }
 
     
