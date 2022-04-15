@@ -23,7 +23,7 @@ public class accounts {
 
     }
 
-    public Object address(String street, int zip){
+    public address(String street, int zip){
         this.street = street;
         this.zip = zip;
     }
