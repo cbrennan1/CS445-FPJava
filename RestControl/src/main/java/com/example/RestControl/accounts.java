@@ -12,8 +12,14 @@ public class accounts {
     private String picture;
     private boolean is_active;
     private String date_created;
+    private String message;
 
-    public accounts(long uid, String name, String address, String street, int zip, String phone, String picture, boolean is_active, String date_created) {
+    /*
+    public accounts() {
+
+    }
+*/
+    public accounts(long uid, String name, String address, String street, int zip, String phone, String picture, boolean is_active, String date_created, String message) {
         this.uid = uid;
         this.name = name;
         this.address = address;
@@ -23,6 +29,7 @@ public class accounts {
         this.picture = picture;
         this.is_active = is_active;
         this.date_created = date_created;
+        this.message = message;
     }
 
 
@@ -52,6 +59,9 @@ public class accounts {
     }
     public String getDate_created() {
         return date_created;
+    }
+    public String getMessage() {
+        return message;
     }
 }
 
