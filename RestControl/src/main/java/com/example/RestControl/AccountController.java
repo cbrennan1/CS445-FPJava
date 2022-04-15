@@ -25,7 +25,7 @@ public class AccountController {
     @GetMapping("/bn/api/accounts")
     public List<accounts> getAccounts () {
         DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
-        Date date_created = new Date();  
+        LocalDateTime date_created.now();  
         String formatted_date = date_created.format(myFormatObj);
         accounts a0 = new accounts("<uid0>", "Virgil Bistriceanu", "10 West", "31st ST", 60616, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
         accounts a1 = new accounts("<uid1", "Jane Smith", "123 ", "2nd ST", 60607, "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
