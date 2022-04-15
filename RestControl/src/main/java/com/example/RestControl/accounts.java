@@ -61,7 +61,7 @@ public class accounts {
     public boolean getIs_active() {
         return is_active;
     }
-    public String getformatted_date() {}
+    public String getformatted_date() {
         return formatted_date;
     }
    /* public String getMessage() {
