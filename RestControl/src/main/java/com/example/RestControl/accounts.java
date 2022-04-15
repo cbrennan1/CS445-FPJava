@@ -36,10 +36,10 @@ public class accounts {
        // this.message = message;
     }
 
-    public static address(String street, int zip){
+   /* public static address(String street, int zip){
         this.street = street;
         this.zip = zip;
-    }
+    }*/
 
     public String getUid() {
         return uid;
