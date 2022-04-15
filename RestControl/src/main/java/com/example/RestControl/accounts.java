@@ -26,6 +26,7 @@ public class accounts {
     public address(String street, int zip){
         this.street = street;
         this.zip = zip;
+        return address;
     }
 
     public accounts(String uid, String name, Object address, String phone, String picture, boolean is_active, String formatted_date) {
