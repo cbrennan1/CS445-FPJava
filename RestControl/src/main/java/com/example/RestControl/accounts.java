@@ -18,11 +18,11 @@ public class accounts {
     private String formatted_date;
     //private String message;
 
-    /*
+
     public accounts() {
 
     }
-*/
+
     public accounts(String uid, String name, String address, String street, int zip, String phone, String picture, boolean is_active, String formatted_date) {
         this.uid = uid;
         this.name = name;
