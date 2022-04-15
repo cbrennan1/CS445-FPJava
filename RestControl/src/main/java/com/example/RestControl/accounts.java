@@ -23,11 +23,6 @@ public class accounts {
 
     }
 
-    public address(String street, int zip){
-        this.street = street;
-        this.zip = zip;
-    }
-
     public accounts(String uid, String name, Object address, String phone, String picture, boolean is_active, String formatted_date) {
         this.uid = uid;
         this.name = name;
@@ -41,6 +36,10 @@ public class accounts {
        // this.message = message;
     }
 
+    public Object address(String street, int zip){
+        this.street = street;
+        this.zip = zip;
+    }
 
     public String getUid() {
         return uid;
