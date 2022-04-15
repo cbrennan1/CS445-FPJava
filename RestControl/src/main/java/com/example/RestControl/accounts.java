@@ -36,10 +36,9 @@ public class accounts {
        // this.message = message;
     }
 
-    public address(String street, int zip){
+    public void address(String street, int zip){
         this.street = street;
         this.zip = zip;
-        return address;
     }
 
     public String getUid() {
