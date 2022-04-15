@@ -17,9 +17,9 @@ public class AccountController {
 
     @GetMapping("/bn/api/accounts")
     public accounts getAccounts () {
-        accounts accounts = new accounts("<uid0>", "Virgil Bistriceanu", "10 West", "31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
-        accounts accounts = new accounts("<uid1>", "Virgil Bistriceanu", "10 West", "31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
-        accounts accounts = new accounts("<uid2>", "Virgil Bistriceanu", "10 West", "31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
+        accounts accounts = new accounts("<uid0>", "Virgil Bistriceanu", "10 West", "31st ST", 60616, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
+        accounts accounts = new accounts("<uid1>", "Virgil Bistriceanu", "10 West", "31st ST", 60616, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
+        accounts accounts = new accounts("<uid2>", "Virgil Bistriceanu", "10 West", "31st ST", 60616, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
         return accounts;
     }
 
