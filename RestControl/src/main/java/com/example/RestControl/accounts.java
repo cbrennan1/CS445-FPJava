@@ -3,7 +3,7 @@ package com.example.RestControl;
 
 
 public class accounts {
-    private final long uid;
+    private String uid;
     private String name;
     private String address;
     private String street;
@@ -12,14 +12,14 @@ public class accounts {
     private String picture;
     private boolean is_active;
     private String date_created;
-    private String message;
+    //private String message;
 
     /*
     public accounts() {
 
     }
 */
-    public accounts(long uid, String name, String address, String street, int zip, String phone, String picture, boolean is_active, String date_created, String message) {
+    public accounts(String uid, String name, String address, String street, int zip, String phone, String picture, boolean is_active, String date_created ) {//, String message) {
         this.uid = uid;
         this.name = name;
         this.address = address;
@@ -29,11 +29,11 @@ public class accounts {
         this.picture = picture;
         this.is_active = is_active;
         this.date_created = date_created;
-        this.message = message;
+       // this.message = message;
     }
 
 
-    public long getUid() {
+    public String getUid() {
         return uid;
     }
     public String getName() {
@@ -60,8 +60,8 @@ public class accounts {
     public String getDate_created() {
         return date_created;
     }
-    public String getMessage() {
+   /* public String getMessage() {
         return message;
-    }
+    } */
 }
 

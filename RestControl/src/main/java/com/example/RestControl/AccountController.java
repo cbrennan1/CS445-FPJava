@@ -16,8 +16,11 @@ public class AccountController {
     private final AtomicLong counter = new AtomicLong();
 
     @GetMapping("/bn/api/accounts")
-    public accounts accounts(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return new accounts(counter.incrementAndGet(), String.format(template,name), name, name, 0, name, name, false, name, name);
+    public accounts getAccounts () {
+        accounts accounts = new accounts("<uid0>", "Virgil Bistriceanu", "10 West", "31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
+        accounts accounts = new accounts("<uid1>", "Virgil Bistriceanu", "10 West", "31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
+        accounts accounts = new accounts("<uid2>", "Virgil Bistriceanu", "10 West", "31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, "<date0>");
+        return accounts;
     }
 
     
