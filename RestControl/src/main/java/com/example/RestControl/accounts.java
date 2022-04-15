@@ -36,7 +36,7 @@ public class accounts {
        // this.message = message;
     }
 
-    public Object address(String street, int zip){
+    public address(String street, int zip){
         this.street = street;
         this.zip = zip;
     }
@@ -47,7 +47,7 @@ public class accounts {
     public String getName() {
         return name;
     }
-    public String getAddress() {
+    public Object getAddress() {
         return address;
     }
     public String getStreet() {
