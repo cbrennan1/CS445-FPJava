@@ -39,6 +39,7 @@ public class accounts {
     public address(String street, int zip){
         this.street = street;
         this.zip = zip;
+        return Object address;
     }
 
     public String getUid() {
