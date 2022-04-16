@@ -14,10 +14,11 @@ public class AccountController {
     DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
     LocalDateTime date_created = LocalDateTime.now();
     String formatted_date = date_created.format(myFormatObj);
+    String extraZipCodes[] = {"60607", "60608"};
 
-    Asks a0 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type", "description",  "2022-03-14", ["60607", "60608"], true, formatted_date);
-    Asks a1 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type", "description",  "2022-03-14", ["60607", "60608"], true, formatted_date);
-    Asks a2 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type",  "description",  "2022-03-14", ["60607", "60608"], true, formatted_date);
+    asks a0 = new asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type", "description",  "2022-03-14", extraZipCodes, true, formatted_date);
+    asks a1 = new asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type", "description",  "2022-03-14", extraZipCodes, true, formatted_date);
+    asks a2 = new asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type",  "description",  "2022-03-14", extraZipCodes, true, formatted_date);
        
     @RequestMapping(value = "/bn/api/asks", method = RequestMethod.GET)
     public List<asks> getAsks() {
