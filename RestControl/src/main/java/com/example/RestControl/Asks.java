@@ -27,7 +27,7 @@ public class Asks {
 	private boolean is_active;
 	private String date_created;
 	
-	public Asks(long uid, long aid, String type, String description, String start_date, String end_date, int[] extra_zip, boolean is_active, String date_created) {
+	public Asks(long uid, long aid, String type, String description, String start_date, String end_date, String[] extra_zip, boolean is_active, String date_created) {
 		this.uid = uid;
 		this.aid = aid;
 		this.type = type;
@@ -58,7 +58,7 @@ public class Asks {
 	public String getEnd_date() {
 		return end_date;
 	}
-	public int[] getExtra_zip() {
+	public String[] getExtra_zip() {
 		return extra_zip;
 	}
 	public boolean getIs_active() {
