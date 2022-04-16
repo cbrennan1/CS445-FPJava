@@ -48,6 +48,8 @@ public class accounts {
         return name;
     }
     public String getAddress() {
+        getStreet();
+        getZip();
         return address;
     }
     public String getStreet() {
