@@ -8,7 +8,7 @@ import java.util.Calendar;
 public class accounts {
     private String uid;
     private String name;
-    private Object address;
+    private List address;
     private String street;
     private int zip;
     private String phone;
@@ -23,12 +23,12 @@ public class accounts {
 
     }
 
-    public accounts(String uid, String name, Object address, String phone, String picture, boolean is_active, String formatted_date) {
+    public accounts(String uid, String name, String address, String street, Int zip, String phone, String picture, boolean is_active, String formatted_date) {
         this.uid = uid;
         this.name = name;
         this.address = address;
-        //this.street = street;
-        //this.zip = zip;
+        this.street = street;
+        this.zip = zip;
         this.phone = phone;
         this.picture = picture;
         this.is_active = is_active;
@@ -47,7 +47,7 @@ public class accounts {
     public String getName() {
         return name;
     }
-    public Object getAddress() {
+    public String getAddress() {
         return address;
     }
     public String getStreet() {
