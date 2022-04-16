@@ -32,8 +32,8 @@ public class AsksController {
     Asks a2 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type",  "description",  "2022-03-14", extraZipCodes, true, formatted_date);
        
     @RequestMapping(value = "/bn/api/asks", method = RequestMethod.GET)
-    public List<asks> getAsks() {
-        List<asks> list = new ArrayList<>();
+    public List<Asks> getAsks() {
+        List<Asks> list = new ArrayList<>();
         list.add(a0);
         list.add(a1);
         list.add(a2);
