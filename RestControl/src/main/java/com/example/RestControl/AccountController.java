@@ -30,9 +30,9 @@ public class AccountController {
         //addressArray[0] = (new String("10 West 31st ST"), new Integer(60616));
         //addressArray[1] = (new String("123 2nd ST"), new Integer(60607));
         //addressArray[2] = (new String("01 West Main St."), new Integer(60010));
-    accounts a0 = new accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", "10",  "West 31st ST", '60616', "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
-    accounts a1 = new accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", "123",  "2nd ST", '60607', "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
-    accounts a2 = new accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "01",  "West Main St.", '60616', "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
+    accounts a0 = new accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", "10",  "West 31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
+    accounts a1 = new accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", "123",  "2nd ST", "60607", "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
+    accounts a2 = new accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "01",  "West Main St.", "60616", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
        
     @RequestMapping(value = "/bn/api/accounts", method = RequestMethod.GET)
     public List<accounts> getAccounts() {
