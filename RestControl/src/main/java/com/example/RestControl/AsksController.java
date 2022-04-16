@@ -27,9 +27,9 @@ public class AsksController {
     String formatted_date = date_created.format(myFormatObj);
     String extraZipCodes[] = {"60607", "60608"};
 
-    Asks a0 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type", "description",  "2022-03-14", extraZipCodes, true, formatted_date);
-    Asks a1 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type", "description",  "2022-03-14", extraZipCodes, true, formatted_date);
-    Asks a2 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type",  "description",  "2022-03-14", extraZipCodes, true, formatted_date);
+    Asks a0 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type", "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
+    Asks a1 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type", "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
+    Asks a2 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + counter.getAndIncrement() + ">", "type",  "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
        
     @RequestMapping(value = "/bn/api/asks", method = RequestMethod.GET)
     public List<Asks> getAsks() {
