@@ -27,7 +27,7 @@ public class AccountController {
         DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
         LocalDateTime date_created = LocalDateTime.now();
         String formatted_date = date_created.format(myFormatObj);
-        Object[] addressArray = new Object[3];
+        List<accounts> addressArray = new ArrayList<>();
         addressArray[0] = (new String("10 West 31st ST"), new Integer(60616));
         addressArray[1] = (new String("123 2nd ST"), new Integer(60607));
         addressArray[2] = (new String("01 West Main St."), new Integer(60010));
