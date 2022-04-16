@@ -23,7 +23,7 @@ public class Asks {
 	private String description;
 	private String start_date;
 	private String end_date;
-	private int[] extra_zip;
+	private String[] extra_zip;
 	private boolean is_active;
 	private String date_created;
 	
