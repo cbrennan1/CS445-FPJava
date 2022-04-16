@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 public class Asks {
-	private final long uid;
-	private final long aid;
+	private String uid;
+	private String aid;
 	private String type;
 	private String description;
 	private String start_date;
@@ -40,10 +40,10 @@ public class Asks {
 	}
 
 	
-	public long getUid() {
+	public String getUid() {
 		return uid;
 	}
-	public long getAid() {
+	public String getAid() {
 		return aid;
 	}
 	public String getType() {
