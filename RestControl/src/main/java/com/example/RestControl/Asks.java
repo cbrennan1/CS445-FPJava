@@ -27,7 +27,7 @@ public class Asks {
 	private boolean is_active;
 	private String date_created;
 	
-	public Asks(long uid, long aid, String type, String description, String start_date, String end_date, String[] extra_zip, boolean is_active, String date_created) {
+	public Asks(String uid, String aid, String type, String description, String start_date, String end_date, String[] extra_zip, boolean is_active, String date_created) {
 		this.uid = uid;
 		this.aid = aid;
 		this.type = type;
