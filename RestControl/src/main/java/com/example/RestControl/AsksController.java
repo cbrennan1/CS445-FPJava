@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class AccountController {
+public class AsksController {
 
     private final AtomicLong counter = new AtomicLong(0);
 
