@@ -10,7 +10,7 @@ public class accounts {
     private String name;
     private String address;
     private String street;
-    private int zip;
+    private String zip;
     private String phone;
     private String picture;
     private boolean is_active;
@@ -23,7 +23,7 @@ public class accounts {
 
     }
 
-    public accounts(String uid, String name, String address, String street, int zip, String phone, String picture, boolean is_active, String formatted_date) {
+    public accounts(String uid, String name, String address, String street, String zip, String phone, String picture, boolean is_active, String formatted_date) {
         this.uid = uid;
         this.name = name;
         this.address = address;
@@ -53,7 +53,7 @@ public class accounts {
     public String getStreet() {
         return street;
     }
-    public int getZip() {
+    public String getZip() {
         return zip;
     }
     public String getPhone() {
