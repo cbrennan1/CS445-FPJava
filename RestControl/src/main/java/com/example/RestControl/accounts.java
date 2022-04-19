@@ -6,40 +6,33 @@ import java.util.Calendar;
 
 
 public class accounts {
-    private String uid;
-    private String name;
-    private String address;
-    private String street;
-    private String zip;
-    private String phone;
-    private String picture;
-    private boolean is_active;
-  //private Date date_created;
-    private String formatted_date;
-    //private String message;
+	private final String uid;
+	private String name;
+	private Dictionary address = new Hashtable();
+	private String street;
+	private String zip;
+
+	private String phone;
+	private String picture;
+	private boolean is_active;
+	private String date_created;
 
 
     public accounts() {
 
     }
 
-    public accounts(String uid, String name, String address, String street, String zip, String phone, String picture, boolean is_active, String formatted_date) {
-        this.uid = uid;
-        this.name = name;
-        this.address = address;
-        this.street = street;
-        this.zip = zip;
-        this.phone = phone;
-        this.picture = picture;
-        this.is_active = is_active;
-        this.formatted_date = formatted_date;
-       // this.message = message;
-    }
+    public accounts(String uid, String name, String street, String zip, String phone, String picture, boolean is_active, String date_created) {
+		this.uid = uid;
+		this.name = name;
+		this.address.put("zip", zip);
+		this.address.put("street", street);
+		this.phone = phone;
+		this.picture = picture;
+		this.is_active = is_active;
+		this.date_created = date_created;
+	}
 
-   /* public static address(String street, int zip){
-        this.street = street;
-        this.zip = zip;
-    }*/
 
     public String getUid() {
         return uid;
@@ -47,17 +40,16 @@ public class accounts {
     public String getName() {
         return name;
     }
-    public String getAddress() {
-        getStreet();
-        getZip();
-        return address;
-    }
+	public Dictionary getAddress() {
+		return address;
+	}
+    /*
     public String getStreet() {
         return street;
     }
     public String getZip() {
         return zip;
-    }
+    }*/
     public String getPhone() {
         return phone;
     }
@@ -70,8 +62,5 @@ public class accounts {
     public String getformatted_date() {
         return formatted_date;
     }
-   /* public String getMessage() {
-        return message;
-    } */
 }
 
