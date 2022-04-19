@@ -30,7 +30,7 @@ public class accounts {
 		this.name = name;
         this.address_JSON = new JSONObject();
 	    address_JSON.put(street, zip);
-		this.address.put(address_JSON);
+		this.address_JSON.put(address_JSON);
 		this.phone = phone;
 		this.picture = picture;
 		this.is_active = is_active;
@@ -45,7 +45,7 @@ public class accounts {
         return name;
     }
 	public Dictionary getAddress() {
-		return address;
+		return address_JSON;
 	}
     /*
     public String getStreet() {
