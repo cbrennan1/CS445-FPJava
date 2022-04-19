@@ -20,13 +20,16 @@ public class accounts {
 	private boolean is_active;
 	private String formatted_date;
 
+    
+
 
 
     public accounts(String uid, String name, String street, String zip, String phone, String picture, boolean is_active, String formatted_date) {
 		this.uid = uid;
 		this.name = name;
-		this.address.put("zip", zip);
-		this.address.put("street", street);
+        JSONObject address_JSON = new JSONObject();
+	    address_JSON.put(street, zip)
+		this.address.put(address_JSON)
 		this.phone = phone;
 		this.picture = picture;
 		this.is_active = is_active;

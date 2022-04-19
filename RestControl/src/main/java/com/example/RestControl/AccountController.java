@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.text.SimpleDateFormat;   
 import java.time.LocalDateTime;   
 import java.time.format.DateTimeFormatter; 
-
+import org.json.simple.JSONObject;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +26,8 @@ public class AccountController {
     DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
     LocalDateTime date_created = LocalDateTime.now();
     String formatted_date = date_created.format(myFormatObj);
+	JSONObject account_JSON = new JSONObject();
+	account_JSON.put()
 
 	accounts account0 = new accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", "West 31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
 	accounts account1 = new accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", "2nd ST", "60607", "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
