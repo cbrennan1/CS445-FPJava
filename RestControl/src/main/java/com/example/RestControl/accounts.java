@@ -33,7 +33,7 @@ public class accounts {
 		this.phone = phone;
 		this.picture = picture;
 		this.is_active = is_active;
-		this.date_created = date_created;
+		this.formatted_date = formatted_date;
 	}
 
 
