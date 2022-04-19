@@ -12,7 +12,7 @@ import org.json.simple.JSONObject;
 public class accounts {
 	private final String uid;
 	private String name;
-	private Dictionary address = new Hashtable();
+	private JSONObject address_JSON;
 	private String street;
 	private String zip;
 
