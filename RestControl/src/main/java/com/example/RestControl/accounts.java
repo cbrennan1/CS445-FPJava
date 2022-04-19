@@ -29,7 +29,8 @@ public class accounts {
 		this.uid = uid;
 		this.name = name;
         this.address_JSON = new JSONObject();
-		this.address_JSON.put(street, zip);
+		this.address_JSON.put("street", street);
+        this.address_JSON.put("zip", zip);
 		this.phone = phone;
 		this.picture = picture;
 		this.is_active = is_active;
