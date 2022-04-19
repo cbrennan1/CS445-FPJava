@@ -18,7 +18,7 @@ public class accounts {
 	private String phone;
 	private String picture;
 	private boolean is_active;
-	private String date_created;
+	private String formatted_date;
 
 
     public accounts() {
