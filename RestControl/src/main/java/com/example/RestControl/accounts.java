@@ -28,7 +28,7 @@ public class accounts {
     public accounts(String uid, String name, String street, String zip, String phone, String picture, boolean is_active, String formatted_date) {
 		this.uid = uid;
 		this.name = name;
-        JSONObject address_JSON = new JSONObject();
+        this.address_JSON = new JSONObject();
 	    address_JSON.put(street, zip);
 		this.address.put(address_JSON);
 		this.phone = phone;
