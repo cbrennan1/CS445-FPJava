@@ -29,8 +29,7 @@ public class accounts {
 		this.uid = uid;
 		this.name = name;
         this.address_JSON = new JSONObject();
-	    address_JSON.put(street, zip);
-		this.address_JSON.put(address_JSON);
+		this.address_JSON.put(street, zip);
 		this.phone = phone;
 		this.picture = picture;
 		this.is_active = is_active;
@@ -44,7 +43,7 @@ public class accounts {
     public String getName() {
         return name;
     }
-	public Dictionary getAddress() {
+	public JSONObject getAddress() {
 		return address_JSON;
 	}
     /*
