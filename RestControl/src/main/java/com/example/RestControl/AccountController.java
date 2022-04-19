@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class AccountsController {
+public class AccountController {
 	private final AtomicLong counter = new AtomicLong();
     DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
     LocalDateTime date_created = LocalDateTime.now();
