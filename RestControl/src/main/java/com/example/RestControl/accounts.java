@@ -21,9 +21,6 @@ public class accounts {
 	private String formatted_date;
 
 
-    public accounts() {
-
-    }
 
     public accounts(String uid, String name, String street, String zip, String phone, String picture, boolean is_active, String formatted_date) {
 		this.uid = uid;
