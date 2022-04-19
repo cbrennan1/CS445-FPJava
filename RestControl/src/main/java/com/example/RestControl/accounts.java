@@ -1,7 +1,10 @@
 package com.example.RestControl;
 import java.util.Date;
 import java.util.Calendar;
-
+import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Hashtable;
+import java.util.List;
 // Test
 
 
@@ -22,7 +25,7 @@ public class accounts {
 
     }
 
-    public accounts(String uid, String name, String street, String zip, String phone, String picture, boolean is_active, String date_created) {
+    public accounts(String uid, String name, String street, String zip, String phone, String picture, boolean is_active, String formatted_date) {
 		this.uid = uid;
 		this.name = name;
 		this.address.put("zip", zip);
