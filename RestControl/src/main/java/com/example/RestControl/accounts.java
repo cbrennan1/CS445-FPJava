@@ -9,10 +9,10 @@ import org.json.simple.JSONObject;
 // Test
 
 
-public class accounts {
+public class Accounts {
 	private final String uid;
 	private String name;
-	private JSONObject address_JSON;
+	private Map address = new LinkedHashMap(2);
 	private String street;
 	private String zip;
 
@@ -20,51 +20,38 @@ public class accounts {
 	private String picture;
 	private boolean is_active;
 	private String formatted_date;
-
-    
-
-
-
-    public accounts(String uid, String name, String street, String zip, String phone, String picture, boolean is_active, String formatted_date) {
+	
+	public Accounts(String uid, String name, String street, String zip, String phone, String picture, boolean is_active, String formatted_date) {
 		this.uid = uid;
 		this.name = name;
-        this.address_JSON = new JSONObject();
-        this.address_JSON.put("zip", zip);
-		this.address_JSON.put("street", street);
+		this.address.put("street", street);
+		this.address.put("zip", zip);
 		this.phone = phone;
 		this.picture = picture;
 		this.is_active = is_active;
 		this.formatted_date = formatted_date;
 	}
 
-
-    public String getUid() {
-        return uid;
-    }
-    public String getName() {
-        return name;
-    }
-	public JSONObject getAddress() {
-		return address_JSON;
+	public String getUid() {
+		return uid;
 	}
-    /*
-    public String getStreet() {
-        return street;
-    }
-    public String getZip() {
-        return zip;
-    }*/
-    public String getPhone() {
-        return phone;
-    }
-    public String getPicture() {
-        return picture;
-    }
-    public boolean getIs_active() {
-        return is_active;
-    }
-    public String getformatted_date() {
-        return formatted_date;
-    }
+	public String getName() {
+		return name;
+	}
+	public Map getAddress() {
+		return address;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public String getPicture() {
+		return picture;
+	}
+	public boolean getIs_active() {
+		return is_active;
+	}
+	public String getFormatted_Date() {
+		return formatted_date;
+	}
+	
 }
-
