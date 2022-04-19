@@ -33,8 +33,8 @@ public class AccountController {
     	
     
 	@RequestMapping(value = "/bn/api/accounts", method = RequestMethod.GET)
-	public List<Accounts> getAccounts() {
-	    List<Accounts> list = new ArrayList<>();
+	public List<accounts> getAccounts() {
+	    List<accounts> list = new ArrayList<>();
 	    list.add(account0);
 	    list.add(account1);
 	    list.add(account2);
