@@ -57,4 +57,9 @@ public class AccountsService {
 		return account3;
 	}
 	
+	public Accounts testFour(Accounts newAccount) {
+		Accounts account3 = new Accounts("<uid3>", newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), newAccount.getDate_Created());
+		return account3;
+	}
+	
 }
