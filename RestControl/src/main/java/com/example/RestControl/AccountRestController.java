@@ -57,12 +57,13 @@ public class AccountRestController {
 	
 
 	@PutMapping("/bn/api/accounts/{uid3}")
-	public ResponseEntity<Accounts> putAccounts(@RequestBody Accounts updatedAccount,  HttpServletResponse response) {
+	public Map putAccounts(@RequestBody Accounts updatedAccount,  HttpServletResponse response) {
 	    Map account= accountsService.updateAccounts(updatedAccount);
 		if(account == null) {
-			return new ResponseEntity<Accounts> (HttpStatus.NO_CONTENT);
+			response.setStatus(204);
 		}
-		return new ResponseEntity<Accounts> (HttpStatus.BAD_REQUEST);
+		response.setStatus(400);
+		return account;
 	}
 
 	/*
