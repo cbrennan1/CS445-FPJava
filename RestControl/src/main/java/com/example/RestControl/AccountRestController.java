@@ -91,8 +91,6 @@ public class AccountRestController {
 	//@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<Accounts> addAccount(@RequestBody Accounts newAccount) {
 		Accounts account = accountsService.addAccount(newAccount);
-		HttpHeaders httpHeaders = new HttpHeaders();
-		httpHeaders.set("Accept", "application/json");
 		return new ResponseEntity<Accounts> (newAccount, HttpStatus.OK);
 
 	}
