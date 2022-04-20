@@ -99,7 +99,7 @@ public class AccountRestController {
 	public Accounts putAccount(@RequestBody Accounts newAccount, HttpServletResponse response) {
         return accountsService.putAccount(newAccount);
 	}
-	
+	/*
 	@GetMapping("/accounts/{uid3}")
 	public ResponseEntity<Accounts> testFour(String accountUid) {
 			
@@ -109,6 +109,6 @@ public class AccountRestController {
 			}
 			return new ResponseEntity<Accounts> (account,HttpStatus.OK);
 		}
-	
+	*/
 }
 
