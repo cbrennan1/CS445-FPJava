@@ -24,7 +24,7 @@ public class AccountsService {
 	Accounts account0 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", address0, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
 	Accounts account1 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", address1, "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
 	Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  address2, "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
-
+	Accounts account3;
 	
 
 	public List<Accounts> getAccounts() {
@@ -41,6 +41,9 @@ public class AccountsService {
 	    list.add(account0);
 	    list.add(account1);
 	    list.add(account2);
+	    if(account3 != null) {
+	    	list.add(account3);
+	    }
 	    return list;
 	}
 	
@@ -62,7 +65,7 @@ public class AccountsService {
 	}
 	
 	public Accounts putAccount(Accounts newAccount) {
-		Accounts account3 = new Accounts(newAccount.getUid(), newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), newAccount.getDate_Created());
+		account3 = new Accounts(newAccount.getUid(), newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), newAccount.getDate_Created());
 		return null;
 	}
 	/*
