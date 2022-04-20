@@ -51,13 +51,10 @@ public class AccountRestController {
 	@GetMapping("/bn/api/accounts/{uid}/activate")
 	public Map testSix(@RequestBody Accounts updatedAccount,  HttpServletResponse response) {
 	    Map account= accountsService.updateAccounts(updatedAccount);
-		if(account == null) {
-			response.setStatus(204);
-			return null;
-		} else {
 		response.setStatus(400);
-		return account; }
+		return account; 
 	}
+	
 	
 	@PostMapping("/bn/api/accounts")
 	@ResponseStatus(HttpStatus.CREATED)
