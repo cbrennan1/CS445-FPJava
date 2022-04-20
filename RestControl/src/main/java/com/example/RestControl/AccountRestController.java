@@ -99,7 +99,12 @@ public class AccountRestController {
 	public Accounts putAccount(@RequestBody Accounts newAccount, HttpServletResponse response) {
         return null;
 	}
-	
+	@GetMapping("/accounts/{uid3}")
+	@ResponseStatus(HttpStatus.CREATED)
+	public Accounts testFour(@RequestBody Accounts newAccount/*, HttpServletResponse response*/) {
+        //response.setHeader("Location", "/bn/api/accounts/" + newAccount.getUid());
+		return accountsService.addAccount(newAccount);
+	}
 	
 }
 
