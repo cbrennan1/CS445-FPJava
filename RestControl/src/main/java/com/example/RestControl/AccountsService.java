@@ -73,6 +73,7 @@ public class AccountsService {
 			error400.put("detail", "You may not use PUT to activate an account, use GET /accounts/<uid3>/activate instead");
 			error400.put("status", 400);
 			error400.put("instance", "/accounts/<uid3>");
+			getAccounts();
 			return error400;
 		}else {
 			account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
