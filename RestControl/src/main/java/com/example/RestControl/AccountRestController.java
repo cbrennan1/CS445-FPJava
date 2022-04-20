@@ -69,7 +69,7 @@ public class AccountRestController {
 	*/
 	@Autowired
 	AccountsService accountsService;
-	HttpServletResponse response;
+	
 	
 	@GetMapping("/accounts")
 	public List<Accounts> getAccounts(){
@@ -89,8 +89,8 @@ public class AccountRestController {
 	
 	@PostMapping("/accounts")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Accounts addAccount(@RequestBody Accounts newAccount) {
-        //response.setHeader("Location", "/bn/api/accounts/" + newAccount.getUid());
+	public Accounts addAccount(@RequestBody Accounts newAccount, HttpServletResponse response) {
+        response.setHeader("Location", "/bn/api/accounts/" + newAccount.getUid());
 		return accountsService.addAccount(newAccount);
 	}
 	
