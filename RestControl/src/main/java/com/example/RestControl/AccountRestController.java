@@ -88,14 +88,13 @@ public class AccountRestController {
 	}
 	
 	@PostMapping("/accounts")
-	//@ResponseStatus(HttpStatus.CREATED)
-	public ResponseEntity<Accounts> addAccount(@RequestBody Accounts newAccount) {
-		Accounts account = accountsService.addAccount(newAccount);
-		return new ResponseEntity<Accounts> (newAccount, HttpStatus.OK);
-
+	@ResponseStatus(HttpStatus.CREATED)
+	public Accounts addAccount(@RequestBody Accounts newAccount) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Location", "Location");
+		return accountsService.addAccount(newAccount);
 	}
-		//return accountsService.addAccount(newAccount);
 	
-
+	
 }
 
