@@ -48,6 +48,15 @@ public class AccountRestController {
 		return new ResponseEntity<Accounts> (account,HttpStatus.OK);
 	}
 	
+	@GetMapping("/bn/api/accounts/{uid}/activate")
+	public ResponseEntity<Accounts> testSix(@PathVariable("uid")String accountId) {
+		Accounts account = accountsService.getAccountsbyUid(accountId);
+		if(account == null) {
+			return new ResponseEntity<Accounts> (HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<Accounts> (account,HttpStatus.OK);
+	}
+	
 	@PostMapping("/bn/api/accounts")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Accounts addAccount(@RequestBody Accounts newAccount, HttpServletResponse response) {
