@@ -26,7 +26,7 @@ public class AccountController {
     
 	accounts account0 = new accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", "10 West 31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
 	accounts account1 = new accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", "123 2nd ST", "60607", "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
-	accounts account2 = new accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "101 W Main St.", "60616", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
+	accounts account2 = new accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "101 W Main St.", "60010", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
     	
     
 	@RequestMapping(value = "/bn/api/accounts", method = RequestMethod.GET)
