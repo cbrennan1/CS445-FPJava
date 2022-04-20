@@ -67,7 +67,7 @@ public class AccountsService {
 
 	public Accounts updateAccounts(Accounts updatedAccount) {
 		account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
-		return null;
+		return account3;
 	}
 
 }
