@@ -65,7 +65,7 @@ public class AccountsService {
 	}
 	
 	public Accounts putAccount(Accounts newAccount) {
-		account3 = new Accounts(newAccount.getUid(), newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), newAccount.getDate_Created());
+		account3 = new Accounts(account3.getUid(), newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), newAccount.getDate_Created());
 		return null;
 	}
 	/*
