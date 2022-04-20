@@ -96,8 +96,8 @@ public class AccountRestController {
 	
 	@PutMapping("/accounts/{uid3}")
 	//@ResponseStatus(HttpStatus.NO_CONTENT)
-	public ResponseEntity<Accounts> putAccount(Accounts newAccount){
-		Accounts account = accountsService.putAccount(newAccount);
+	public ResponseEntity<Accounts> putAccount(@PathVariable("uid") String accountUid){
+		Accounts account = accountsService.getAccountsbyUID(accountUid);
 		if(account == null) {
 			return new ResponseEntity<Accounts> (account,HttpStatus.NO_CONTENT);
 		}

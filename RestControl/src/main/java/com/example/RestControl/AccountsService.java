@@ -56,6 +56,8 @@ public class AccountsService {
 
 	public Accounts addAccount(Accounts newAccount) {
 		Accounts account3 = new Accounts("<uid" + counter.getAndIncrement() + ">", newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), newAccount.getDate_Created());
+		List<Accounts> list = getAccounts();
+		list.add(account3);
 		return account3;
 	}
 	
