@@ -90,7 +90,7 @@ public class AccountRestController {
 	@PostMapping("/accounts")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Accounts addAccount(@RequestBody Accounts newAccount) {
-        response.setHeader("Location", "/bn/api/accounts/" + newAccount.getUid());
+        //response.setHeader("Location", "/bn/api/accounts/" + newAccount.getUid());
 		return accountsService.addAccount(newAccount);
 	}
 	
