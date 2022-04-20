@@ -101,11 +101,14 @@ public class AccountRestController {
 	}
 	
 	@GetMapping("/accounts/{uid3}")
-	@ResponseStatus(HttpStatus.OK)
-	public Accounts testFour(@RequestBody Accounts newAccount/*, HttpServletResponse response*/) {
-        //response.setHeader("Location", "/bn/api/accounts/" + newAccount.getUid());
-		return accountsService.addAccount(newAccount);
-	}
+	public ResponseEntity<Accounts> testFour(String accountUid) {
+			
+			Accounts account = accountsService.getAccountsbyUID(accountUid);
+			if(account == null) {
+				return new ResponseEntity<Accounts> (account,HttpStatus.NOT_FOUND);
+			}
+			return new ResponseEntity<Accounts> (account,HttpStatus.OK);
+		}
 	
 }
 
