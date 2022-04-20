@@ -26,7 +26,6 @@ public class AccountsService {
 	Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  address2, "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
 	Accounts account3;
 	
-
 	public List<Accounts> getAccounts() {
 		
 		this.address0.put("street", "10 West 31st ST");
@@ -35,43 +34,37 @@ public class AccountsService {
 		this.address1.put("zip", "60607");
 		this.address2.put("street", "101 W Main St.");
 		this.address2.put("zip", "60010");
-		
-		
+
+
 	    List<Accounts> list = new ArrayList<>();
 	    list.add(account0);
 	    list.add(account1);
 	    list.add(account2);
 	    if(account3 != null) {
-	    	list.add(account3);
+		    list.add(account3);
 	    }
 	    return list;
 	}
 	
-	public Accounts getAccountsbyUID(String uid) {
+	public Accounts getAccountsbyUid(String uid) {
 		
 		Predicate<Accounts> byUid = p -> p.getUid().equals(uid);
 		return filterAccounts(byUid);
 	}
-	
+
 	private Accounts filterAccounts(Predicate<Accounts> strategy) {
 		return getAccounts().stream().filter(strategy).findFirst().orElse(null);
 	}
 
 	public Accounts addAccount(Accounts newAccount) {
-		account3 = new Accounts(newAccount.getUid(), newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), newAccount.getDate_Created());
-		List<Accounts> list = getAccounts();
-		list.add(account3);
+		account3 = new Accounts("<uid" + counter.get() + ">", newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), formatted_date);
 		return account3;
 	}
-	
-	public Accounts putAccount(Accounts newAccount) {
-		account3 = new Accounts(newAccount.getUid(), newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), newAccount.getDate_Created());
+
+
+	public Accounts putAccount(Accounts updatedAccount) {
+		account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
 		return null;
 	}
-	/*
-	public Accounts testFour(String uid) {
-		Object account3 = putAccount(account0);
-		return account3;
-		}
-	*/
+
 }

@@ -31,42 +31,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/bn/api")
 public class AccountRestController {
 	
-	/*
-	private final AtomicLong counter = new AtomicLong();
-    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
-    LocalDateTime date_created = LocalDateTime.now();
-    String formatted_date = date_created.format(myFormatObj); 
-    
-	Accounts account0 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", "10 West 31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
-	Accounts account1 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", "123 2nd ST", "60607", "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
-	Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "101 W Main St.", "60010", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
-    	
-    
-	@GetMapping(path="/Accounts")
-	public List<Accounts> getAccounts() {
-	    List<Accounts> list = new ArrayList<>();
-	    list.add(account0);
-	    list.add(account1);
-	    list.add(account2);
-	    return list;
-	}
-	@PostMapping(path="/Accounts")
-	public List<Accounts> postAccounts() {
-	    List<Accounts> list = new ArrayList<>();
-	    list.add(account0);
-	    list.add(account1);
-	    list.add(account2);
-	    return list;
-	}
-	@PutMapping(path="/Accounts")
-	public List<Accounts> putAccounts() {
-	    List<Accounts> list = new ArrayList<>();
-	    list.add(account0);
-	    list.add(account1);
-	    list.add(account2);
-	    return list;
-	} 
-	*/
 	@Autowired
 	AccountsService accountsService;
 	
@@ -80,7 +44,7 @@ public class AccountRestController {
 	@GetMapping("/accounts/{uid}")
 	public ResponseEntity<Accounts> getAccountsbyUid(@PathVariable("uid") String accountUid) {
 		
-		Accounts account = accountsService.getAccountsbyUID(accountUid);
+		Accounts account = accountsService.getAccountsbyUid(accountUid);
 		if(account == null) {
 			return new ResponseEntity<Accounts> (account,HttpStatus.NOT_FOUND);
 		}
@@ -90,14 +54,14 @@ public class AccountRestController {
 	@PostMapping("/accounts")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Accounts addAccount(@RequestBody Accounts newAccount, HttpServletResponse response) {
-        response.setHeader("Location", "/bn/api/accounts/" + newAccount.getUid());
+		response.setHeader("Location", "/bn/api/accounts/" + newAccount.getUid());
 		return accountsService.addAccount(newAccount);
 	}
 	
 	@PutMapping("/accounts/{uid3}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public Accounts putAccount(@RequestBody Accounts newAccount, HttpServletResponse response) {
-        return accountsService.putAccount(newAccount);
+	public Accounts putAccounts(@RequestBody Accounts updatedAccount,  HttpServletResponse response) {
+	    return accountsService.putAccount(updatedAccount);
 	}
 	
 	/*
