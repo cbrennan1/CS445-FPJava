@@ -32,8 +32,6 @@ public class Accounts {
 	}
 
 	
-
-
 	public String getUid() {
 		return uid;
 	}
@@ -53,8 +51,9 @@ public class Accounts {
 	public boolean getIs_active() {
 		return is_active;
 	}
-	public String getDate_Created() {
+	public String getDate_created() {
 		return date_created;
 	}
+	
 	
 }

@@ -13,20 +13,23 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AccountsService {
-	private final AtomicLong counter = new AtomicLong();
+	private final AtomicLong counter = new AtomicLong(0);
     DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
     LocalDateTime date_created = LocalDateTime.now();
     String formatted_date = date_created.format(myFormatObj);
-    public Map address0 = new LinkedHashMap(2);
+    
+	public Map address0 = new LinkedHashMap(2);
 	private Map address1 = new LinkedHashMap(2);
 	private Map address2 = new LinkedHashMap(2);
+
 	
+
 	Accounts account0 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", address0, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
 	Accounts account1 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", address1, "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
 	Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  address2, "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
 	Accounts account3;
 	
-public List<Accounts> getAccounts() {
+	public List<Accounts> getAccounts() {
 		
 		this.address0.put("street", "10 West 31st ST");
 		this.address0.put("zip", "60616");
@@ -51,21 +54,20 @@ public List<Accounts> getAccounts() {
 		Predicate<Accounts> byUid = p -> p.getUid().equals(uid);
 		return filterAccounts(byUid);
 	}
-	
+
 	private Accounts filterAccounts(Predicate<Accounts> strategy) {
 		return getAccounts().stream().filter(strategy).findFirst().orElse(null);
 	}
-	
+
 	public Accounts addAccount(Accounts newAccount) {
 		account3 = new Accounts("<uid" + counter.get() + ">", newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), formatted_date);
 		return account3;
 	}
-	
-	
+
+
 	public Accounts updateAccounts(Accounts updatedAccount) {
 		account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
 		return null;
 	}
-
 
 }

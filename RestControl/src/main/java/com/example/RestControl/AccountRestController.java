@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AccountRestController {
+		
 	
 	@Autowired
 	AccountsService accountsService;
@@ -60,17 +61,10 @@ public class AccountRestController {
 	public Accounts putAccounts(@RequestBody Accounts updatedAccount,  HttpServletResponse response) {
 	    return accountsService.updateAccounts(updatedAccount);
 	}
-	
+
 	/*
-	@GetMapping("/accounts/<uid3>")
-	public ResponseEntity<Accounts> testFour(String accountUid) {
-			
-			Accounts account = accountsService.getAccountsbyUID(accountUid);
-			if(account == null) {
-				return new ResponseEntity<Accounts> (account,HttpStatus.NOT_FOUND);
-			}
-			return new ResponseEntity<Accounts> (account,HttpStatus.OK);
-		}
+	public Accounts putAccounts(@PathVariable(value="uid")String uid, @RequestBody Accounts updatedAccount,  HttpServletResponse response) {
+	    return accountsService.updateAccounts(updatedAccount);
+	}
 	*/
 }
-
