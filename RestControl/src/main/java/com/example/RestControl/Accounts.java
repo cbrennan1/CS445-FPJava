@@ -19,16 +19,16 @@ public class Accounts {
 	private String phone;
 	private String picture;
 	private boolean is_active;
-	private String formatted_date;
+	private String date_created;
 	
-	public Accounts(String uid, String name, Map address, String phone, String picture, boolean is_active, String formatted_date) {
+	public Accounts(String uid, String name, Map address, String phone, String picture, boolean is_active, String date_created) {
 		this.uid = uid;
 		this.name = name;
 		this.address = address; 
 		this.phone = phone;
 		this.picture = picture;
 		this.is_active = is_active;
-		this.formatted_date = formatted_date;
+		this.date_created = date_created;
 	}
 
 	
@@ -53,8 +53,8 @@ public class Accounts {
 	public boolean getIs_active() {
 		return is_active;
 	}
-	public String getFormatted_Date() {
-		return formatted_date;
+	public String getDate_Created() {
+		return date_created;
 	}
 	
 }
