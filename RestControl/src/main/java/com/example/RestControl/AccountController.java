@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/bn/api")
 public class AccountController {
 	
 	
@@ -29,7 +30,7 @@ public class AccountController {
 	accounts account2 = new accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "101 W Main St.", "60010", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
     	
     
-	@RequestMapping(value = "/bn/api/accounts", method = RequestMethod.GET)
+	@GetMapping(path="/accounts"
 	public List<accounts> getAccounts() {
 	    List<accounts> list = new ArrayList<>();
 	    list.add(account0);
