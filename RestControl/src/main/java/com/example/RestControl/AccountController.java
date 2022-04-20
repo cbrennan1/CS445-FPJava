@@ -30,7 +30,7 @@ public class AccountController {
 	accounts account2 = new accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "101 W Main St.", "60010", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
     	
     
-	@GetMapping(path="/accounts"
+	@GetMapping(path="/accounts")
 	public List<accounts> getAccounts() {
 	    List<accounts> list = new ArrayList<>();
 	    list.add(account0);
