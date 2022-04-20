@@ -26,7 +26,7 @@ public class AccountsService {
 	Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  address2, "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
 	Accounts account3;
 	
-	public List<Accounts> getAccounts() {
+public List<Accounts> getAccounts() {
 		
 		this.address0.put("street", "10 West 31st ST");
 		this.address0.put("zip", "60616");

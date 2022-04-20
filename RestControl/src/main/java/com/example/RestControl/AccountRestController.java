@@ -28,37 +28,34 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/bn/api")
 public class AccountRestController {
 	
 	@Autowired
 	AccountsService accountsService;
-	
-	
-	@GetMapping("/accounts")
-	public List<Accounts> getAccounts(){
-		return accountsService.getAccounts();
-		
+    
+	@GetMapping("/bn/api/accounts")
+	public List<Accounts> getAccounts() {
+	    return accountsService.getAccounts();
 	}
 	
-	@GetMapping("/accounts/{uid}")
-	public ResponseEntity<Accounts> getAccountsbyUid(@PathVariable("uid") String accountUid) {
-		
-		Accounts account = accountsService.getAccountsbyUid(accountUid);
+	@GetMapping("/bn/api/accounts/{uid}")
+	public ResponseEntity<Accounts> getAccountsByUid(@PathVariable("uid")String accountId) {
+		Accounts account = accountsService.getAccountsbyUid(accountId);
 		if(account == null) {
-			return new ResponseEntity<Accounts> (account,HttpStatus.NOT_FOUND);
+			return new ResponseEntity<Accounts> (HttpStatus.NOT_FOUND);
 		}
 		return new ResponseEntity<Accounts> (account,HttpStatus.OK);
 	}
 	
-	@PostMapping("/accounts")
+	@PostMapping("/bn/api/accounts")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Accounts addAccount(@RequestBody Accounts newAccount, HttpServletResponse response) {
 		response.setHeader("Location", "/bn/api/accounts/" + newAccount.getUid());
 		return accountsService.addAccount(newAccount);
 	}
 	
-	@PutMapping("/accounts/{uid3}")
+
+	@PutMapping("/bn/api/accounts/{uid3}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public Accounts putAccounts(@RequestBody Accounts updatedAccount,  HttpServletResponse response) {
 	    return accountsService.putAccount(updatedAccount);
