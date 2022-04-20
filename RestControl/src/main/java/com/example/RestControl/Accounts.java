@@ -12,7 +12,7 @@ import java.util.LinkedHashMap;
 
 
 public class Accounts {
-	private final String uid;
+	private String uid;
 	private String name;
 	private Map address = new LinkedHashMap(2);
 	private String street;
@@ -54,6 +54,10 @@ public class Accounts {
 	}
 	public String getFormatted_Date() {
 		return formatted_date;
+	}
+
+	public void setUid(String newId) {
+	    this.uid = newId;
 	}
 	
 }

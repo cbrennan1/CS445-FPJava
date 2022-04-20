@@ -21,6 +21,8 @@ public class AccountsService {
     Accounts account0 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", "10 West 31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
 	Accounts account1 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", "123 2nd ST", "60607", "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
 	Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "101 W Main St.", "60010", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
+	
+	Accounts account3 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "101 W Main St.", "60010", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
 
 	public List<Accounts> getAccounts() {
 	    List<Accounts> list = new ArrayList<>();
@@ -39,10 +41,10 @@ public class AccountsService {
 	private Accounts filterAccounts(Predicate<Accounts> strategy) {
 		return getAccounts().stream().filter(strategy).findFirst().orElse(null);
 	}
-	/*
-	public Accounts addAccout(Accounts newAccount) {
+
+	public Accounts addAccount(Accounts newAccount) {
 		newAccount.setUid("3");
 		return newAccount;
 	}
-	*/
+	
 }

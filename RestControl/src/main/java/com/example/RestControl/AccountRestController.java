@@ -11,10 +11,13 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.json.simple.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -70,8 +73,18 @@ public class AccountRestController {
 	}
 	
 	@GetMapping("/accounts/{uid}")
-	public Accounts getAccountsbyUid(@PathVariable("uid") String accountUid) {
-		return accountsService.getAccountsbyUID(accountUid);
+	public ResponseEntity<Accounts> getAccountsbyUid(@PathVariable("uid") String accountUid) {
+		
+		Accounts account = accountsService.getAccountsbyUID(accountUid);
+		if(account == null) {
+			return new ResponseEntity<Accounts> (account,HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<Accounts> (account,HttpStatus.OK);
 	}
+	
+	public Accounts addAccount(@RequestBody Accounts newAccount) {
+		return accountsService.addAccount(newAccount);
+	}
+
 }
 
