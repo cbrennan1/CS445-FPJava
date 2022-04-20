@@ -61,10 +61,10 @@ public class AccountRestController {
 	    Map account= accountsService.updateAccounts(updatedAccount);
 		if(account == null) {
 			response.setStatus(204);
+			return null;
 		} else {
 		response.setStatus(400);
 		return account; }
-		return null;
 	}
 
 	/*
