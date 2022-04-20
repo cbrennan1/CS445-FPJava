@@ -20,6 +20,12 @@ public class AccountsService {
     public Map address0 = new LinkedHashMap(2);
 	private Map address1 = new LinkedHashMap(2);
 	private Map address2 = new LinkedHashMap(2);
+	
+	Accounts account0 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", address0, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
+	Accounts account1 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", address1, "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
+	Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  address2, "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
+
+	
 
 	public List<Accounts> getAccounts() {
 		
@@ -30,10 +36,6 @@ public class AccountsService {
 		this.address2.put("street", "101 W Main St.");
 		this.address2.put("zip", "60010");
 		
-		Accounts account0 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", address0, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
-		Accounts account1 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", address1, "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
-		Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  address2, "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
-
 		
 	    List<Accounts> list = new ArrayList<>();
 	    list.add(account0);
@@ -61,5 +63,9 @@ public class AccountsService {
 		Accounts account3 = new Accounts(newAccount.getUid(), newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), newAccount.getDate_Created());
 		return account3;
 	}
+	public Accounts testFour(String uid) {
+			Predicate<Accounts> byUid = p -> p.getUid().equals(uid);
+			return filterAccounts(byUid);
+		}
 	
 }
