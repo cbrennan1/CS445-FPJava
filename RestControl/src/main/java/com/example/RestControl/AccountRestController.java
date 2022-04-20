@@ -49,10 +49,12 @@ public class AccountRestController {
 	}
 	
 	@GetMapping("/bn/api/accounts/{uid}/activate")
-	public Map testSix(@RequestBody Accounts updatedAccount,  HttpServletResponse response) {
-	    Map account= accountsService.updateAccounts(updatedAccount);
-		response.setStatus(400);
-		return account; 
+	public ResponseEntity<Accounts> testSix(@PathVariable("uid")String accountId) {
+		Accounts account = accountsService.getAccountsbyUid(accountId);
+		if(account == null) {
+			return new ResponseEntity<Accounts> (HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<Accounts> (account,HttpStatus.OK);
 	}
 	
 	
