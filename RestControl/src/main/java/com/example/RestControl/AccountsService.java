@@ -61,7 +61,7 @@ public class AccountsService {
 	
 	public Accounts putAccount(Accounts newAccount) {
 		Accounts account3 = new Accounts(newAccount.getUid(), newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), newAccount.getDate_Created());
-		return account3;
+		return null;
 	}
 	/*
 	public Accounts testFour(String uid) {
