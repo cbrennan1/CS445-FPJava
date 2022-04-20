@@ -9,8 +9,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.json.simple.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -66,6 +69,7 @@ public class AccountRestController {
 	*/
 	@Autowired
 	AccountsService accountsService;
+	HttpServletResponse response;
 	
 	@GetMapping("/accounts")
 	public List<Accounts> getAccounts(){
@@ -84,11 +88,16 @@ public class AccountRestController {
 	}
 	
 	@PostMapping("/accounts")
-	@ResponseStatus(HttpStatus.CREATED)
-	public Accounts addAccount(@RequestBody Accounts newAccount) {
+	//@ResponseStatus(HttpStatus.CREATED)
+	public ResponseEntity<Accounts> addAccount(@RequestBody Accounts newAccount) {
+		Accounts account = accountsService.addAccount(newAccount);
+		HttpHeaders httpHeaders = new HttpHeaders();
+		httpHeaders.set("Accept", "application/json");
+		return new ResponseEntity<Accounts> (newAccount, HttpStatus.OK);
 
-		return accountsService.addAccount(newAccount);
 	}
+		//return accountsService.addAccount(newAccount);
+	
 
 }
 
