@@ -56,8 +56,10 @@ public class Accounts {
 		return formatted_date;
 	}
 
-	public void setUid(String newId) {
-	    this.uid = newId;
+	/*
+	public String setUid(String newId) {
+		this.uid = newId;
+	    return newId;
 	}
-	
+	*/
 }

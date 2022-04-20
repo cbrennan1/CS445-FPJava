@@ -22,7 +22,6 @@ public class AccountsService {
 	Accounts account1 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", "123 2nd ST", "60607", "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
 	Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "101 W Main St.", "60010", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
 	
-	Accounts account3 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "101 W Main St.", "60010", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
 
 	public List<Accounts> getAccounts() {
 	    List<Accounts> list = new ArrayList<>();
@@ -43,8 +42,9 @@ public class AccountsService {
 	}
 
 	public Accounts addAccount(Accounts newAccount) {
-		newAccount.setUid("3");
-		return newAccount;
+		Accounts account3 = new Accounts("<uid" + counter.getAndIncrement() + ">", "John Smith",  "123 Main ST", "60616", "312-456-7890", "http://example.com/images/john-smith.jpeg", false, formatted_date);
+		return account3;
+
 	}
 	
 }

@@ -82,6 +82,7 @@ public class AccountRestController {
 		return new ResponseEntity<Accounts> (account,HttpStatus.OK);
 	}
 	
+	@PostMapping("/accounts")
 	public Accounts addAccount(@RequestBody Accounts newAccount) {
 		return accountsService.addAccount(newAccount);
 	}
