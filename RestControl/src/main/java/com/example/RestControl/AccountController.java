@@ -10,6 +10,8 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.json.simple.*;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,6 +34,22 @@ public class AccountController {
     
 	@GetMapping(path="/accounts")
 	public List<accounts> getAccounts() {
+	    List<accounts> list = new ArrayList<>();
+	    list.add(account0);
+	    list.add(account1);
+	    list.add(account2);
+	    return list;
+	}
+	@PostMapping(path="/accounts")
+	public List<accounts> postAccounts() {
+	    List<accounts> list = new ArrayList<>();
+	    list.add(account0);
+	    list.add(account1);
+	    list.add(account2);
+	    return list;
+	}
+	@PutMapping(path="/accounts")
+	public List<accounts> putAccounts() {
 	    List<accounts> list = new ArrayList<>();
 	    list.add(account0);
 	    list.add(account1);
