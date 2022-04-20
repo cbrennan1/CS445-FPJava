@@ -51,20 +51,21 @@ public List<Accounts> getAccounts() {
 		Predicate<Accounts> byUid = p -> p.getUid().equals(uid);
 		return filterAccounts(byUid);
 	}
-
+	
 	private Accounts filterAccounts(Predicate<Accounts> strategy) {
 		return getAccounts().stream().filter(strategy).findFirst().orElse(null);
 	}
-
+	
 	public Accounts addAccount(Accounts newAccount) {
 		account3 = new Accounts("<uid" + counter.get() + ">", newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), formatted_date);
 		return account3;
 	}
-
-
-	public Accounts putAccount(Accounts updatedAccount) {
+	
+	
+	public Accounts updateAccounts(Accounts updatedAccount) {
 		account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
 		return null;
 	}
+
 
 }

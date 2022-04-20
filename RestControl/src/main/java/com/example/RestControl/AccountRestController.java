@@ -58,7 +58,7 @@ public class AccountRestController {
 	@PutMapping("/bn/api/accounts/{uid3}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public Accounts putAccounts(@RequestBody Accounts updatedAccount,  HttpServletResponse response) {
-	    return accountsService.putAccount(updatedAccount);
+	    return accountsService.updateAccounts(updatedAccount);
 	}
 	
 	/*
