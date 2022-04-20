@@ -57,6 +57,19 @@ public class AccountRestController {
 		return new ResponseEntity<Accounts> (account,HttpStatus.OK);
 	}
 	
+	@GetMapping("/bn/api/accounts?key=main")
+	public ResponseEntity<List<Accounts>> mainKey(String accountId1, String accountId2, HttpServletResponse response) {
+		accountId1 = "<uid2>";
+		accountId2 = "<uid3>";
+		Accounts account1 = accountsService.getAccountsbyUid(accountId1);
+		Accounts account2 = accountsService.getAccountsbyUid(accountId2);
+		List<Accounts> list = new ArrayList<>();
+	    list.add(account1);
+	    list.add(account2);
+		response.setStatus(200);
+		return new ResponseEntity<List<Accounts>> (list,HttpStatus.OK);
+	}
+
 	
 	@PostMapping("/bn/api/accounts")
 	@ResponseStatus(HttpStatus.CREATED)
