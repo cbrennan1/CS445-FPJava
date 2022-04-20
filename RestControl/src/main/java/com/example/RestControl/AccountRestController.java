@@ -97,7 +97,7 @@ public class AccountRestController {
 	@PutMapping("/accounts/{uid3}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public Accounts putAccount(@RequestBody Accounts newAccount, HttpServletResponse response) {
-        return null;
+        return accountsService.putAccount(newAccount);
 	}
 	
 	@GetMapping("/accounts/{uid3}")
