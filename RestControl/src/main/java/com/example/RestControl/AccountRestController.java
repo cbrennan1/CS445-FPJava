@@ -95,19 +95,10 @@ public class AccountRestController {
 	}
 	
 	@PutMapping("/accounts/{uid3}")
-	public ResponseEntity<Accounts> put(@PathVariable("uid") String accountUid) {
-			
-			Accounts account = accountsService.getAccountsbyUID(accountUid);
-			if(account == null) {
-				return new ResponseEntity<Accounts> (account,HttpStatus.NOT_FOUND);
-			}
-			return new ResponseEntity<Accounts> (account,HttpStatus.OK);
-		}
-	/*
+	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public Accounts putAccount(@RequestBody Accounts newAccount, HttpServletResponse response) {
         return null;
 	}
-	*/
 	
 	@GetMapping("/accounts/{uid3}")
 	@ResponseStatus(HttpStatus.OK)
