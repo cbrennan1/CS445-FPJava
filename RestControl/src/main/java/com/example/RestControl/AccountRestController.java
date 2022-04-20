@@ -12,6 +12,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import org.json.simple.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -66,6 +67,11 @@ public class AccountRestController {
 	public List<Accounts> getAccounts(){
 		return accountsService.getAccounts();
 		
+	}
+	
+	@GetMapping("/accounts/{uid}")
+	public Accounts getAccountsbyUid(@PathVariable("uid") String accountUid) {
+		return accountsService.getAccountsbyUID(accountUid);
 	}
 }
 

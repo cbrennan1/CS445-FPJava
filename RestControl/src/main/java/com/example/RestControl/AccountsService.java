@@ -7,6 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.function.Predicate;
 
 import org.springframework.stereotype.Service;
 
@@ -28,4 +29,20 @@ public class AccountsService {
 	    list.add(account2);
 	    return list;
 	}
+	
+	public Accounts getAccountsbyUID(String uid) {
+		
+		Predicate<Accounts> byUid = p -> p.getUid().equals(uid);
+		return filterAccounts(byUid);
+	}
+	
+	private Accounts filterAccounts(Predicate<Accounts> strategy) {
+		return getAccounts().stream().filter(strategy).findFirst().orElse(null);
+	}
+	/*
+	public Accounts addAccout(Accounts newAccount) {
+		newAccount.setUid("3");
+		return newAccount;
+	}
+	*/
 }
