@@ -21,6 +21,8 @@ public class AccountsService {
 	public Map address0 = new LinkedHashMap(2);
 	private Map address1 = new LinkedHashMap(2);
 	private Map address2 = new LinkedHashMap(2);
+	
+	public Map error400 = new LinkedHashMap(5);
 
 	
 
@@ -64,10 +66,30 @@ public class AccountsService {
 		return account3;
 	}
 
-
+	public Map updateAccounts(Accounts updatedAccount) {
+		if (account3.getIs_active() != updatedAccount.getIs_active()) {
+			error400.put("type", "http://cs.iit.edu/~virgil/cs445/mail.spring2022/project/api/problems/data-validation");
+			error400.put("title", "Your request data didn't pass validation");
+			error400.put("detail", "You may not use PUT to activate an account, use GET /accounts/<uid3>/activate instead");
+			error400.put("status", 400);
+			error400.put("instance", "/accounts/<uid3>");
+			return error400;
+		}else {
+			account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
+			return null;
+		}
+	}
+	
+	
+	/*
 	public Accounts updateAccounts(Accounts updatedAccount) {
+		if(account3.getUid() != updatedAccount.getUid()) {
+			return null;
+		} 
+		else {
 		account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
 		return null;
+		}
 	}
-
+	*/
 }
