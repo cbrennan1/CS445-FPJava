@@ -15,8 +15,8 @@ sudo cmod 777 run.sh
 ## Set Up
 1. Install openjdk-17-jdk if not already installed.
 ```
-sudo apt update
-sudo apt install openjdk-17-jdk
+sudo apt update -y
+sudo apt install openjdk-17-jdk -y
 java --version
 ```
 
@@ -29,7 +29,7 @@ sudo ln -s /opt/apache-maven-3.8.5 /opt/maven
 
 3. Set up Enviornment Variables for Maven
 ```
-sudo apt-get install vim
+sudo apt-get install vim -y
 sudo vim /etc/profile.d/maven.sh
 ```
 
@@ -47,7 +47,6 @@ Change permissions and load enviornment variables
 sudo chmod +x /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
 mvn -version
-mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeArtifactId=java-simple -DarchetypeVersion=4.0.0-beta.1 
 ```
 
 4. Install Postman
@@ -55,6 +54,13 @@ mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeAr
 sudo snap install postman
 ```
 
+5. Clean -> Package -> Run Maven Project
+```
+cd RestControl
+mvn clean
+mvn clean package
+mvn spring-boot:run
+```
 
 
 

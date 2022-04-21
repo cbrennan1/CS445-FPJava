@@ -3,8 +3,8 @@
 # Colin Brennan
 
 #Install openjdk-17-jdk
-sudo apt update
-sudo apt install openjdk-17-jdk
+sudo apt update -y
+sudo apt install openjdk-17-jdk -y
 java --version
 
 #Install Maven
@@ -27,7 +27,7 @@ source /etc/profile.d/maven.sh
 mvn -version
 
 #Install Postman
-sudo snap install postman
+sudo snap install postman -y
 
 #Clean -> Package -> Run Maven Project
 cd RestControl
