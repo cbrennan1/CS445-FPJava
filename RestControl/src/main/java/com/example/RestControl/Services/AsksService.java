@@ -22,7 +22,7 @@ public class AsksService {
 	    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
 	    LocalDateTime date_created = LocalDateTime.now();
 	    String formatted_date = date_created.format(myFormatObj);
-String extraZipCodes[] = {"60607", "60608"};
+	    String extraZipCodes[] = {"60607", "60608"};
 	    
 	    Asks a;
 	    Asks a3;
