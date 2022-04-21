@@ -49,11 +49,12 @@ public class AccountRestController {
 	}
 	
 	@GetMapping("/bn/api/accounts/{uid}/activate")
-	public ResponseEntity<Accounts> activateUpdatedAccount(@PathVariable("uid")Accounts accountId) {
-		Accounts activatedAccount = accountsService.activateUpdatedAccount(accountId);
-		if(activatedAccount == null) {
+	public ResponseEntity<Accounts> activateUpdatedAccount(@PathVariable("uid")String accountId) {
+		Accounts account = accountsService.getAccountsbyUid(accountId);
+		if(account == null) {
 			return new ResponseEntity<Accounts> (HttpStatus.NOT_FOUND);
 		}
+		Accounts activatedAccount = accountsService.activateUpdatedAccount(account);
 		return new ResponseEntity<Accounts> (activatedAccount,HttpStatus.OK);
 	}
 	
