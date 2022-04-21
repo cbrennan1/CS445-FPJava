@@ -20,36 +20,30 @@ public class AsksService {
 	    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
 	    LocalDateTime date_created = LocalDateTime.now();
 	    String formatted_date = date_created.format(myFormatObj);
-	    String extraZipCodes[] = {"60607", "60608"};
-	    Asks ask;
-
-	    Asks a0 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + acounter.getAndIncrement() + ">", "type", "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
-	    Asks a1 = new Asks("<uid3>", "<aid" + acounter.getAndIncrement() + ">", "type", "I need a twin bed frame with a spring box.",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
-	    Asks a2 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + acounter.getAndIncrement() + ">", "type",  "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
-	    Asks a3;
+String extraZipCodes[] = {"60607", "60608"};
 	    
+	    Asks a;
+	    Asks a3;
 	    public List<Asks> getAsks() {
 	        List<Asks> list = new ArrayList<>();
-	        list.add(a0);
-	        list.add(a1);
-	        list.add(a2);
-	        if(a3 != null) {
+		    list.add(a);
+		    if(a3 != null) {
 			    list.add(a3);
 		    }
-	        return list;
+		    return list;
 	    }
 	    
 	    public Asks addAsks(Asks newAsk) {
-			ask = new Asks("<uid" + counter.get() + ">", "", newAsk.getType(), newAsk.getDescription(), newAsk.getStart_date(), newAsk.getEnd_date(), newAsk.getExtra_zip(), newAsk.getIs_active(), formatted_date);
-			return ask;
+			a = new Asks(newAsk.getUid(), "<aid1>", newAsk.getType(), newAsk.getDescription(), newAsk.getStart_date(), newAsk.getEnd_date(), newAsk.getExtra_zip(), newAsk.getIs_active(), formatted_date);
+			return a;
 		}
 	    
-	    public Asks getAsksByAid(String aid) {
+	    
+		public Asks getAsksByAid(String aid) {
 			Predicate<Asks> byAid = p -> p.getAid().equals(aid);
-			return filterAsks(byAid);
+			return filterAccounts(byAid);
 		}
-	    
-		private Asks filterAsks(Predicate<Asks> strategy) {
+		private Asks filterAccounts(Predicate<Asks> strategy) {
 			return getAsks().stream().filter(strategy).findFirst().orElse(null);
 		}
 

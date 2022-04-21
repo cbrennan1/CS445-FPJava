@@ -34,6 +34,7 @@ public class AsksRestController {
 	@Autowired
 	AsksService asksService;
 	
+	
 	@GetMapping("/bn/api/asks")
 	public List<Asks> getAsks() {
 	    return asksService.getAsks();
@@ -41,10 +42,11 @@ public class AsksRestController {
 	
 	@PostMapping("/bn/api/accounts/{uid}/asks")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Asks addAsk(@RequestBody Asks newAsks, HttpServletResponse response) {
-		response.setHeader("Location", "/bn/api/accounts/{uid}/asks" + newAsks.getUid());
+	public Asks addAsk(@RequestBody Asks newAsks, @PathVariable("uid") String uid, HttpServletResponse response) {
+		response.setHeader("Location", "/bn/api/accounts/" + uid + "/asks");
 		return asksService.addAsks(newAsks);
 	}
+	
 	@GetMapping("/bn/api/asks/{aid}")
 	public ResponseEntity<Asks> getAsksByAid(@PathVariable("aid")String askId) {
 		Asks asks = asksService.getAsksByAid(askId);
