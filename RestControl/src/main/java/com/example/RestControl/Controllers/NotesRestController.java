@@ -28,7 +28,7 @@ public class NotesRestController {
 	NotesService notesService;
 	
 	
-	@GetMapping("/bn/api/notes")
+	@PostMapping("/bn/api/notes")
 	public List<Notes> getNotes() {
 	    return notesService.getNotes();
 	}
