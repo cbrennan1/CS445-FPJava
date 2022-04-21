@@ -23,9 +23,9 @@ public class AsksService {
 	    String extraZipCodes[] = {"60607", "60608"};
 	    Asks ask;
 
-	    Asks a0 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + acounter.getAndIncrement() + ">", "type", "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
-	    Asks a1 = new Asks("<uid3>", "<aid" + acounter.getAndIncrement() + ">", "type", "I need a twin bed frame with a spring box.",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
-	    Asks a2 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + acounter.getAndIncrement() + ">", "type",  "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
+	    Asks a0 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + acounter.getAndIncrement() + ">", /*"type",*/ "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
+	    Asks a1 = new Asks("<uid3>", "<aid" + acounter.getAndIncrement() + ">", /*"type",*/ "I need a twin bed frame with a spring box.",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
+	    Asks a2 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + acounter.getAndIncrement() + ">", /*"type",*/  "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
 	    Asks a3;
 	    
 	    public List<Asks> getAsks() {
@@ -40,7 +40,7 @@ public class AsksService {
 	    }
 	    
 	    public Asks addAsks(Asks newAsk) {
-			ask = new Asks("<uid" + counter.get() + ">", "", newAsk.getType(), newAsk.getDescription(), newAsk.getStart_date(), newAsk.getEnd_date(), newAsk.getExtra_zip(), newAsk.getIs_active(), formatted_date);
+			ask = new Asks("<uid" + counter.get() + ">", "", /*newAsk.getType(),*/ newAsk.getDescription(), newAsk.getStart_date(), newAsk.getEnd_date(), newAsk.getExtra_zip(), newAsk.getIs_active(), formatted_date);
 			return ask;
 		}
 	    
@@ -54,7 +54,7 @@ public class AsksService {
 		}
 
 		public Map updateAsks(Asks updatedAsk) {
-				a3 = new Asks(updatedAsk.getUid(), updatedAsk.getAid(),  updatedAsk.getType(), updatedAsk.getDescription(), updatedAsk.getStart_date(), updatedAsk.getEnd_date(), updatedAsk.getExtra_zip(), updatedAsk.getIs_active(), updatedAsk.getDate_created());
+				a3 = new Asks(updatedAsk.getUid(), updatedAsk.getAid(),  /*updatedAsk.getType(),*/ updatedAsk.getDescription(), updatedAsk.getStart_date(), updatedAsk.getEnd_date(), updatedAsk.getExtra_zip(), updatedAsk.getIs_active(), updatedAsk.getDate_created());
 				return null;
 		}
 
