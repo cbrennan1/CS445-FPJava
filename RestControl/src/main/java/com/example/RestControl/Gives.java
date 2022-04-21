@@ -1,8 +1,8 @@
 package com.example.RestControl;
 
 public class Gives {
-	private final long uid;
-	private final long gid;
+	private final String uid;
+	private final String gid;
 	private String type;
 	private String description;
 	private String start_date;
@@ -11,7 +11,7 @@ public class Gives {
 	private boolean is_active;
 	private String date_created;
 	
-	public Gives(long uid, long gid, String type, String description, String start_date, String end_date, int[] extra_zip, boolean is_active, String date_created) {
+	public Gives(String uid, String gid, String type, String description, String start_date, String end_date, int[] extra_zip, boolean is_active, String date_created) {
 		this.uid = uid;
 		this.gid = gid;
 		this.type = type;
@@ -24,10 +24,10 @@ public class Gives {
 	}
 
 	
-	public long getUid() {
+	public String getUid() {
 		return uid;
 	}
-	public long getAid() {
+	public String getGid() {
 		return gid;
 	}
 	public String getType() {

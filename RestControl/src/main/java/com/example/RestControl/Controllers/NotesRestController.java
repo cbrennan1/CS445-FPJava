@@ -49,7 +49,7 @@ public class NotesRestController {
 		return new ResponseEntity<Notes> (notes,HttpStatus.OK);
 	}
 
-	@PutMapping("/bn/api/accounts/{uid}/notes/{nid}")
+	@PutMapping("/bn/api/notes/{nid3}")
 	public Notes putNotes(@RequestBody Notes updatedNote,  HttpServletResponse response) {
 
 		response.setStatus(204);
