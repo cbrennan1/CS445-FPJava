@@ -24,7 +24,7 @@ public class AsksService {
 	    Asks ask;
 
 	    Asks a0 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + acounter.getAndIncrement() + ">", "type", "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
-	    Asks a1 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + acounter.getAndIncrement() + ">", "type", "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
+	    Asks a1 = new Asks("<uid3>", "<aid" + acounter.getAndIncrement() + ">", "type", "I need a twin bed frame with a spring box.",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
 	    Asks a2 = new Asks("<uid" + counter.getAndIncrement() + ">", "<aid" + acounter.getAndIncrement() + ">", "type",  "description",  "2022-03-14", "End Date", extraZipCodes, true, formatted_date);
 	    Asks a3;
 	    
@@ -33,6 +33,9 @@ public class AsksService {
 	        list.add(a0);
 	        list.add(a1);
 	        list.add(a2);
+	        if(a3 != null) {
+			    list.add(a3);
+		    }
 	        return list;
 	    }
 	    
