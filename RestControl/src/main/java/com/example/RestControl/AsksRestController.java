@@ -34,7 +34,7 @@ public class AsksRestController {
 	@Autowired
 	AsksService asksService;
 	
-	@GetMapping("/bn/api/accounts")
+	@GetMapping("/bn/api/asks")
 	public List<Asks> getAsks() {
 	    return asksService.getAsks();
 	}
