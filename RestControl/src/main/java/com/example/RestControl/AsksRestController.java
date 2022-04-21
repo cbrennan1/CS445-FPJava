@@ -33,7 +33,7 @@ public class AsksRestController {
 	@PostMapping("/bn/api/accounts/{uid}/asks")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Asks addAsk(@RequestBody Asks newAsks, HttpServletResponse response) {
-		response.setHeader("Location", "/bn/api/accounts/{uid}/asks" + newAsks.getUid());
+		response.setHeader("Location", "/bn/api/accounts/{uid}/asks/{uid}" + newAsks.getUid());
 		return asksService.addAsks(newAsks);
 	}
 }
