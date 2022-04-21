@@ -34,6 +34,11 @@ public class AsksRestController {
 	@Autowired
 	AsksService asksService;
 	
+	@GetMapping("/bn/api/accounts")
+	public List<Asks> getAsks() {
+	    return asksService.getAsks();
+	}
+	
 	@PostMapping("/bn/api/accounts/{uid}/asks")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Asks addAsk(@RequestBody Asks newAsks, HttpServletResponse response) {
