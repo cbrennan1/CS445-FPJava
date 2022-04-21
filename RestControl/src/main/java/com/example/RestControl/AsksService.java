@@ -43,9 +43,10 @@ public class AsksService {
 	    
 	    public Asks getAsksByAid(String aid) {
 			Predicate<Asks> byAid = p -> p.getAid().equals(aid);
-			return filterAccounts(byAid);
+			return filterAsks(byAid);
 		}
-		private Asks filterAccounts(Predicate<Asks> strategy) {
+	    
+		private Asks filterAsks(Predicate<Asks> strategy) {
 			return getAsks().stream().filter(strategy).findFirst().orElse(null);
 		}
 
