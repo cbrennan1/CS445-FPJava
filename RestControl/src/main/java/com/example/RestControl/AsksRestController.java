@@ -30,10 +30,10 @@ public class AsksRestController {
 	@Autowired
 	AsksService asksService;
 	
-	@PostMapping("/bn/api/accounts")
+	@PostMapping("/bn/api/accounts/{uid}/asks")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Asks addAccount(@RequestBody Asks newAsks, HttpServletResponse response) {
-		response.setHeader("Location", "/bn/api/accounts/" + newAsks.getUid());
+	public Asks addAsk(@RequestBody Asks newAsks, HttpServletResponse response) {
+		//response.setHeader("Location", "/bn/api/accounts/" + newAsks.getUid());
 		return asksService.addAsks(newAsks);
 	}
 }
