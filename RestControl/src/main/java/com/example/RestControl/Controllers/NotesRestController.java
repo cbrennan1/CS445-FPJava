@@ -28,12 +28,12 @@ public class NotesRestController {
 	NotesService notesService;
 	
 	
-	@PostMapping("/bn/api/notes")
+	@GetMapping("/bn/api/notes")
 	public List<Notes> getNotes() {
 	    return notesService.getNotes();
 	}
 	
-	@PostMapping("/bn/api/accounts/{uid}/notes")
+	@PostMapping("/bn/api/notes")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Notes addNotes(@RequestBody Notes newNotes, @PathVariable("uid") String uid, HttpServletResponse response) {
 		response.setHeader("Location", "/bn/api/accounts/" + uid + "/notes");
