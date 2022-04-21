@@ -1,6 +1,8 @@
-package com.example.RestControl;
+package com.example.RestControl.Controllers;
 
 import java.util.concurrent.atomic.AtomicLong;
+import com.example.RestControl.*;
+
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,21 +1,21 @@
-package com.example.RestControl;
+package com.example.RestControl.Controllers;
 
 import java.util.concurrent.atomic.AtomicLong;
+import com.example.RestControl.*;
+
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ReportsController {
+public class ThanksController {
 	private static final String template = "Hello";
 	private final AtomicLong counter = new AtomicLong();
 	private final AtomicLong aCounter = new AtomicLong();
-	private final int[] array = new int[2];
-	private final String[] allReports = new String[2];
 	
-	@GetMapping("/bn/api/reports")
-	public Reports reports() {
-		return new Reports(allReports);
+	@GetMapping("/bn/api/thanks")
+	public Thanks thanks(@RequestParam(value = "description", defaultValue = "thank you") String description) {
+		return new Thanks(counter.incrementAndGet(), counter.incrementAndGet(), counter.incrementAndGet(), description, description);
 	}
 }
