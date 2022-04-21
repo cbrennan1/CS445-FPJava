@@ -49,12 +49,13 @@ public class AccountRestController {
 	}
 	
 	@GetMapping("/bn/api/accounts/{uid}/activate")
-	public ResponseEntity<Accounts> activateUpdatedAccount(@PathVariable("uid")String accountId) {
+	public ResponseEntity<Accounts> activateAccountsByUid(@PathVariable("uid")String accountId) {
 		Accounts account = accountsService.getAccountsbyUid(accountId);
+		Accounts activatedAccount = accountsService.activateAccountsByUid(account);
 		if(account == null) {
 			return new ResponseEntity<Accounts> (HttpStatus.NOT_FOUND);
 		}
-		Accounts activatedAccount = accountsService.activateUpdatedAccount(account);
+		
 		return new ResponseEntity<Accounts> (activatedAccount,HttpStatus.OK);
 	}
 	
@@ -82,13 +83,13 @@ public class AccountRestController {
 
 	@PutMapping("/bn/api/accounts/{uid3}")
 	public Map putAccounts(@RequestBody Accounts updatedAccount,  HttpServletResponse response) {
-	    Map account= accountsService.updateAccounts(updatedAccount);
-		if(account == null) {
+		if(accountsService.updateAccounts(updatedAccount) == null) {
 			response.setStatus(204);
-			return null;
-		} else {
-		response.setStatus(400);
-		return account; }
+			return null; 
+		}else {
+			response.setStatus(400);
+			return accountsService.updateAccounts(updatedAccount);
+		}
 	}
 
 	/*

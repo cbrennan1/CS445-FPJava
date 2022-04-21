@@ -78,7 +78,7 @@ public class AccountsService {
 			error400.put("detail", "You may not use PUT to activate an account, use GET /accounts/<uid3>/activate instead");
 			error400.put("status", 400);
 			error400.put("instance", "/accounts/<uid3>");
-			account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
+			//account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
 			return error400;
 		}else {
 			account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
@@ -86,16 +86,10 @@ public class AccountsService {
 		}
 	}
 	
-	
-	/*
-	public Accounts updateAccounts(Accounts updatedAccount) {
-		if(account3.getUid() != updatedAccount.getUid()) {
-			return null;
-		} 
-		else {
-		account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
-		return null;
-		}
+	public Accounts activateAccountsByUid(Accounts activateAccount){
+		Accounts activatedAccount = new Accounts(activateAccount.getUid(), activateAccount.getName(), activateAccount.getAddress(), activateAccount.getPhone(), activateAccount.getPicture(), true, activateAccount.getDate_created());
+		account3 = activatedAccount;
+		return activatedAccount;
 	}
-	*/
+
 }
