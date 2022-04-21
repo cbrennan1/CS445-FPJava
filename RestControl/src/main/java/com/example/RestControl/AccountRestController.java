@@ -49,12 +49,12 @@ public class AccountRestController {
 	}
 	
 	@GetMapping("/bn/api/accounts/{uid}/activate")
-	public ResponseEntity<Accounts> testSix(@PathVariable("uid")String accountId) {
-		Accounts account = accountsService.getAccountsbyUid(accountId);
-		if(account == null) {
+	public ResponseEntity<Accounts> activateUpdatedAccount(@PathVariable("uid")Accounts accountId) {
+		Accounts activatedAccount = accountsService.activateUpdatedAccount(accountId);
+		if(activatedAccount == null) {
 			return new ResponseEntity<Accounts> (HttpStatus.NOT_FOUND);
 		}
-		return new ResponseEntity<Accounts> (account,HttpStatus.OK);
+		return new ResponseEntity<Accounts> (activatedAccount,HttpStatus.OK);
 	}
 	
 	@GetMapping("/bn/api/accounts?key=main")

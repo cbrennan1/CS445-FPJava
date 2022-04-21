@@ -65,6 +65,11 @@ public class AccountsService {
 		account3 = new Accounts("<uid" + counter.get() + ">", newAccount.getName(),  newAccount.getAddress(), newAccount.getPhone(), newAccount.getPicture(), newAccount.getIs_active(), formatted_date);
 		return account3;
 	}
+	
+	public Accounts activateUpdatedAccount(Accounts updatedAccount) {
+		getAccounts();
+		return account3;
+	}
 
 	public Map updateAccounts(Accounts updatedAccount) {
 		if (account3.getIs_active() != updatedAccount.getIs_active()) {
@@ -74,7 +79,6 @@ public class AccountsService {
 			error400.put("status", 400);
 			error400.put("instance", "/accounts/<uid3>");
 			account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
-			getAccounts();
 			return error400;
 		}else {
 			account3 = new Accounts(account3.getUid(), updatedAccount.getName(),  updatedAccount.getAddress(), updatedAccount.getPhone(), updatedAccount.getPicture(), updatedAccount.getIs_active(), formatted_date);
