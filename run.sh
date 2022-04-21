@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Automate Set Up for CS445 Final Project
+# Colin Brennan
 
 #Install openjdk-17-jdk
 sudo apt update

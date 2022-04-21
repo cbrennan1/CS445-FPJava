@@ -5,6 +5,13 @@
   - The project is setup to implement Maven, Java 17, as well as Apache Tomcat 10.
   - The assumption is that this is ran on a fresh installation of Ubuntu 20.04.3
 
+## Automation Script
+Steps 1-4 can be accomplished automatically by running the run.sh script.
+```
+sudo cmod 777 run.sh
+./run.sh
+```
+
 ## Set Up
 1. Install openjdk-17-jdk if not already installed.
 ```
@@ -48,14 +55,6 @@ mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeAr
 sudo snap install postman
 ```
 
-5. Install Github and Clone Repo
-```
-sudo apt-get install git
-mkdir Colin-FP
-cd Colin-FP
-git init
-git pull https://github.com/cbrennan1/CS445-FPJava
-cd CS445-FPJava
-```
+
 
 
