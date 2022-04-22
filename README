@@ -4,16 +4,9 @@
 ## What is this repository for?
   - The project is setup to implement Maven, Java 17, as well as SpringBoot.
   - The assumption is that this is ran on a fresh installation of Ubuntu 20.04.3
-  - Instructions for set up included further down.
-
-## Where Can Tests Be Located
- Once you have gone through the set up steps (either with automation scripts or manually) and the spring-boot:run command is up and running you can see the jacoco test coverage that was created with the command "mvn clean package".  The path is displayed below to the created index.html file.
- ```
- CS445-FPJava/RestControl/target/site/jacoco/index.html
- ```
 
 ## Set Up (Using Automation Scripts)
-1. First Run the setup script titled runsetup.ssh
+1. First Run the setup script titled runsetup.sh
 ```
 sudo chmod 777 runsetup.sh
 ./runsetup.sh
@@ -91,4 +84,8 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-
+## Where Can Tests Be Located
+ Once you have gone through the set up steps (either with automation scripts or manually) and the spring-boot:run command is up and running you can see the jacoco test coverage that was created with the command "mvn clean package".  The path is displayed below to the created index.html file.
+ ```
+ CS445-FPJava/RestControl/target/site/jacoco/index.html
+ ```
