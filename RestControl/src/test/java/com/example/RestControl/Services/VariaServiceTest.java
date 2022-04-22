@@ -1,10 +1,10 @@
-package com.example.RestControl;
+package com.example.RestControl.Services;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class VariaRestControllerTest {
+class VariaServiceTest {
 
 	@Test
 	void test() {

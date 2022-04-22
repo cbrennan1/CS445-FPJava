@@ -1,13 +1,13 @@
-package com.example.RestControl;
+package com.example.RestControl.Services;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class ReportsRestControllerTest {
+class ReportsServiceTest {
 
 	@Test
-	void testReports() {
+	void test() {
 		//fail("Not yet implemented"); // TODO
 	}
 

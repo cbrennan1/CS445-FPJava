@@ -1,10 +1,10 @@
-package com.example.RestControl;
+package com.example.RestControl.Controllers;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class AccountsServiceTest {
+class AccountsRestControllerTest {
 
 	@Test
 	void testGetAccounts() {
@@ -12,7 +12,17 @@ class AccountsServiceTest {
 	}
 
 	@Test
-	void testGetAccountsbyUid() {
+	void testGetAccountsByUid() {
+		//fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testActivateAccountsByUid() {
+		//fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testMainKey() {
 		//fail("Not yet implemented"); // TODO
 	}
 
@@ -22,17 +32,7 @@ class AccountsServiceTest {
 	}
 
 	@Test
-	void testActivateUpdatedAccount() {
-		//fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testUpdateAccounts() {
-		//fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testActivateAccountsByUid() {
+	void testPutAccounts() {
 		//fail("Not yet implemented"); // TODO
 	}
 

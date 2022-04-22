@@ -1,4 +1,4 @@
-package com.example.RestControl;
+package com.example.RestControl.Controllers;
 
 import static org.junit.jupiter.api.Assertions.*;
 

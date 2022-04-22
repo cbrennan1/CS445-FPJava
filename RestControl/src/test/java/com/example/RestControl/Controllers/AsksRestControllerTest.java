@@ -1,38 +1,33 @@
-package com.example.RestControl;
+package com.example.RestControl.Controllers;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class AccountsRestControllerTest {
+class AsksRestControllerTest {
 
 	@Test
-	void testGetAccounts() {
+	void testGetAsks() {
 		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testGetAccountsByUid() {
+	void testAddAsk() {
 		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testActivateAccountsByUid() {
+	void testGetAsksByAid() {
 		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testMainKey() {
+	void testDeactivateAsks() {
 		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testAddAccount() {
-		//fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testPutAccounts() {
+	void testPutAsks() {
 		//fail("Not yet implemented"); // TODO
 	}
 
