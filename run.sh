@@ -28,7 +28,7 @@ source /etc/profile.d/maven.sh
 mvn -version
 
 #Install Postman
-sudo snap install postman -y
+sudo snap install postman
 
 #Clean -> Package -> Run Maven Project
 cd RestControl
