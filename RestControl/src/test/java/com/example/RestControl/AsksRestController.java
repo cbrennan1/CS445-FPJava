@@ -1,33 +1,33 @@
-package com.example.RestControl.Services;
+package com.example.RestControl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class NotesServiceTesting {
+class AsksRestController {
 
 	@Test
-	void testGetNotes() {
+	void testGetAsks() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testAddNotes() {
+	void testAddAsk() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testGetNotesbyNid() {
+	void testGetAsksByAid() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testUpdateNotes() {
+	void testDeactivateAsks() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testDeactivateNotes() {
+	void testPutAsks() {
 		fail("Not yet implemented"); // TODO
 	}
 

@@ -1,10 +1,10 @@
-package com.example.RestControl.Controllers;
+package com.example.RestControl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class AsksRestController {
+class AsksServiceTesting {
 
 	@Test
 	void testGetAsks() {
@@ -12,7 +12,7 @@ class AsksRestController {
 	}
 
 	@Test
-	void testAddAsk() {
+	void testAddAsks() {
 		fail("Not yet implemented"); // TODO
 	}
 
@@ -22,12 +22,12 @@ class AsksRestController {
 	}
 
 	@Test
-	void testDeactivateAsks() {
+	void testUpdateAsks() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testPutAsks() {
+	void testDeactivateAsks() {
 		fail("Not yet implemented"); // TODO
 	}
 
