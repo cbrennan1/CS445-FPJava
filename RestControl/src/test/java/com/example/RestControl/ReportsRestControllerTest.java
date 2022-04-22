@@ -4,15 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class GivesRestControllerTesting {
+class ReportsRestControllerTest {
 
 	@Test
-	void testAddGives() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testPutGives() {
+	void testReports() {
 		fail("Not yet implemented"); // TODO
 	}
 

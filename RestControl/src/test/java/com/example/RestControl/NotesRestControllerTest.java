@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class NotesServiceTesting {
+class NotesRestControllerTest {
 
 	@Test
 	void testGetNotes() {
@@ -17,17 +17,12 @@ class NotesServiceTesting {
 	}
 
 	@Test
-	void testGetNotesbyNid() {
+	void testGetNotesByNid() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testUpdateNotes() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testDeactivateNotes() {
+	void testPutNotes() {
 		fail("Not yet implemented"); // TODO
 	}
 

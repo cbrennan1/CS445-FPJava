@@ -4,30 +4,35 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class AsksServiceTesting {
+class ThanksTest {
 
 	@Test
-	void testGetAsks() {
+	void testThanks() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testAddAsks() {
+	void testGetUid() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testGetAsksByAid() {
+	void testGetTid() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testUpdateAsks() {
+	void testGetThank_to() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testDeactivateAsks() {
+	void testGetDescription() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testGetDate_created() {
 		fail("Not yet implemented"); // TODO
 	}
 

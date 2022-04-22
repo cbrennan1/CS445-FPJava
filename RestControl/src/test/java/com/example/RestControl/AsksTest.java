@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class GivesTesting {
+class AsksTest {
 
 	@Test
-	void testGives() {
+	void testAsks() {
 		fail("Not yet implemented"); // TODO
 	}
 
@@ -17,7 +17,7 @@ class GivesTesting {
 	}
 
 	@Test
-	void testGetGid() {
+	void testGetAid() {
 		fail("Not yet implemented"); // TODO
 	}
 

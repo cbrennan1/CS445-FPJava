@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class VariaRestControllerTesting {
+class VariaRestControllerTest {
 
 	@Test
 	void test() {

@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class VariaServiceTesting {
+class VariaServiceTest {
 
 	@Test
 	void test() {

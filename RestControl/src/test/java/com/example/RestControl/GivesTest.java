@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class NotesTesting {
+class GivesTest {
 
 	@Test
-	void testNotes() {
+	void testGives() {
 		fail("Not yet implemented"); // TODO
 	}
 
@@ -17,47 +17,37 @@ class NotesTesting {
 	}
 
 	@Test
-	void testGetSource_id() {
+	void testGetGid() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testGetConversations() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testGetWith_uid() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testGetNotes() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testGetNid() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testGetTo_type() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testGetTo_user_id() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testGetToid() {
+	void testGetType() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
 	void testGetDescription() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testGetStart_date() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testGetEnd_date() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testGetExtra_zip() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testGetIs_active() {
 		fail("Not yet implemented"); // TODO
 	}
 

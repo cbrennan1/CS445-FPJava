@@ -4,25 +4,35 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class NotesRestControllerTesting {
+class AccountsServiceTest {
 
 	@Test
-	void testGetNotes() {
+	void testGetAccounts() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testAddNotes() {
+	void testGetAccountsbyUid() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testGetNotesByNid() {
+	void testAddAccount() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testPutNotes() {
+	void testActivateUpdatedAccount() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testUpdateAccounts() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testActivateAccountsByUid() {
 		fail("Not yet implemented"); // TODO
 	}
 
