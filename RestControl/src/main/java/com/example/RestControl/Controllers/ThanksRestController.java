@@ -24,7 +24,7 @@ import com.example.RestControl.Services.ThanksService;
 
 
 @RestController
-public class ThanksController {
+public class ThanksRestController {
 
 	@Autowired
 	ThanksService thanksService;

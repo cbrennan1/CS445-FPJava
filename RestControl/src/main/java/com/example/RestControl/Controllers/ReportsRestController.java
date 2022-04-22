@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ReportsController {
+public class ReportsRestController {
 	private static final String template = "Hello";
 	private final AtomicLong counter = new AtomicLong();
 	private final AtomicLong aCounter = new AtomicLong();
