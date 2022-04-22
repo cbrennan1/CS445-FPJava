@@ -2,17 +2,46 @@
 ## Colin Brennan
 
 ## What is this repository for?
-  - The project is setup to implement Maven, Java 17, as well as Apache Tomcat 10.
+  - The project is setup to implement Maven, Java 17, as well as SpringBoot.
   - The assumption is that this is ran on a fresh installation of Ubuntu 20.04.3
+  - Instructions for set up included further down.
 
-## Automation Script
-Steps 1-4 can be accomplished automatically by running the run.sh script.
+## Where Can Tests Be Located
+ Once you have gone through the set up steps (either with automation scripts or manually) and the spring-boot:run command is up and running you can see the jacoco test coverage that was created with the command "mvn clean package".  The path is displayed below to the created index.html file.
+ ```
+ CS445-FPJava/RestControl/target/site/jacoco/index.html
+ ```
+
+## Set Up (Using Automation Scripts)
+1. First Run the setup script titled runsetup.ssh
 ```
-sudo cmod 777 run.sh
-./run.sh
+sudo chmod 777 runsetup.sh
+./runsetup.sh
 ```
 
-## Set Up
+2. Set up Enviornment Variables for Maven
+```
+sudo vim /etc/profile.d/maven.sh
+```
+
+Once the file is open you need to append the following into it.
+```
+export JAVA_HOME=/lib/jvm/java-17-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+export M2_HOME=/opt/apache-maven-3.8.5
+export MAVEN_HOME=/opt/apache-maven-3.8.5
+export PATH=${M2_HOME}/bin:${PATH}
+```
+
+3. Run the Maven Script
+```
+sudo chmod 777 runmaven.sh
+./runmaven.sh
+``
+
+
+
+## Set Up (Without Using Scripts)
 1. Install openjdk-17-jdk if not already installed.
 ```
 sudo apt update -y
