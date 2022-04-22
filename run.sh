@@ -13,7 +13,7 @@ sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
 sudo ln -s /opt/apache-maven-3.8.5 /opt/maven
 
 #Set up Enviornment Variables for Maven
-sudo cat << EOF >> test.txt
+sudo cat << EOF >> /etc/profile.d/maven.sh
 export JAVA_HOME=/lib/jvm/java-17-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
 export M2_HOME=/opt/apache-maven-3.8.5

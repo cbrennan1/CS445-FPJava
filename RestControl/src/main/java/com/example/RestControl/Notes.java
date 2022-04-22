@@ -1,5 +1,4 @@
 package com.example.RestControl;
-
 public class Notes {
 	private String uid;
 	private String source_id;
@@ -13,24 +12,16 @@ public class Notes {
 	private String description;
 	private String date_created;
 	
-	public Notes (String uid, String nid, String to_type, String to_user_id, String to_id, String description) {
+	public Notes (String uid, String nid, String to_type, String to_user_id, String to_id, String description, String date_created) {
 		this.uid = uid;
 		this.nid = nid;
 		this.to_type = to_type;
 		this.to_user_id = to_user_id;
 		this.to_id = to_id;
 		this.description = description;
+		this.date_created = date_created;
 	}
 
-/*
-	pm.test("Verify thank <nid1> content", function() {
-	    const jsonData = pm.response.json();
-	    pm.expect(jsonData.uid).to.eql(pm.collectionVariables.get("<uid6>"));
-	    pm.expect(jsonData.to_type).to.eql('give');
-	    pm.expect(jsonData.to_user_id).to.eql(pm.collectionVariables.get("<uid4>"));
-	    pm.expect(jsonData.to_id).to.eql(pm.collectionVariables.get("<gid5>"));
-	    pm.expect(jsonData.description).to.eql('Can I get braids this coming Monday?');
-*/
 	
 	public String getUid() {
 		return uid;

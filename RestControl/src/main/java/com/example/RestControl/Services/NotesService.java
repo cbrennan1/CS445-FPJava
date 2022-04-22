@@ -3,16 +3,14 @@ package com.example.RestControl.Services;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Predicate;
-import com.example.RestControl.*;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.example.RestControl.Notes;
 
 @Service
 public class NotesService {
@@ -36,7 +34,7 @@ public class NotesService {
 	    }
 	    
 	    public Notes addNotes(Notes newNote) {
-			a = new Notes(newNote.getUid(), "", newNote.getTo_type(), newNote.getTo_user_id(), newNote.getToid(), newNote.getDescription());
+			a = new Notes(newNote.getUid(), "", newNote.getTo_type(), newNote.getTo_user_id(), newNote.getToid(), newNote.getDescription(), formatted_date);
 			//	public Notes (String uid, String to_type, String to_user_id, String to_id, String description) {
 	    	//a = new Notes(newNote.getUid(), "<aid1>", newNote.getType(), newNote.getDescription(), newNote.getStart_date(), newNote.getEnd_date(), newNote.getExtra_zip(), newNote.getIs_active(), formatted_date);
 			return a;
@@ -52,14 +50,13 @@ public class NotesService {
 		}
 
 		public Notes updateNotes(Notes updatedNotes) {
-			a3 = new Notes(updatedNotes.getUid(), updatedNotes.getNid(), updatedNotes.getTo_type(), updatedNotes.getTo_user_id(), updatedNotes.getToid(), updatedNotes.getDescription());
+			a3 = new Notes(updatedNotes.getUid(), updatedNotes.getNid(), updatedNotes.getTo_type(), updatedNotes.getTo_user_id(), updatedNotes.getToid(), updatedNotes.getDescription(), formatted_date);
 			return null;
 		}
 		
 		public Notes deactivateNotes(Notes deactivateNotes){
-			Notes deactivateNote = new Notes(deactivateNotes.getUid(), deactivateNotes.getNid(), deactivateNotes.getTo_type(), deactivateNotes.getTo_user_id(), deactivateNotes.getToid(), deactivateNotes.getDescription());
+			Notes deactivateNote = new Notes(deactivateNotes.getUid(), deactivateNotes.getNid(), deactivateNotes.getTo_type(), deactivateNotes.getTo_user_id(), deactivateNotes.getToid(), deactivateNotes.getDescription(), formatted_date);
 			a3 = deactivateNote;
 			return deactivateNote;
 		}
-
 }

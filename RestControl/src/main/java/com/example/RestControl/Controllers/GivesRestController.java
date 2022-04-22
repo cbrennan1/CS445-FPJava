@@ -1,26 +1,13 @@
 package com.example.RestControl.Controllers;
 
-import java.util.concurrent.atomic.AtomicLong;
-import com.example.RestControl.*;
-import com.example.RestControl.Services.GivesService;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
 
 import java.util.concurrent.atomic.AtomicLong;
 
 import javax.servlet.http.HttpServletResponse;
 
-import java.util.List;
+
 import java.util.Map;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Calendar;
-import java.text.SimpleDateFormat;   
-import java.time.LocalDateTime;   
-import java.time.format.DateTimeFormatter;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,6 +23,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.RestControl.Gives;
+import com.example.RestControl.Services.GivesService;
 
 
 @RestController
@@ -56,8 +46,6 @@ public class GivesRestController {
 		response.setStatus(204);
 		return givesService.updateGives(updatedGive);
 	}
-
-
 
 }
 

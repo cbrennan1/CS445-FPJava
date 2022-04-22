@@ -1,22 +1,19 @@
 package com.example.RestControl.Services;
 
 
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.function.Predicate;
+
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.RestControl.*;
+import com.example.RestControl.Gives;
 
 @Service
 public class GivesService {
@@ -31,7 +28,7 @@ public class GivesService {
 	    Gives g;
 	    Gives g3;
 	    
-	    List<Asks> aList;
+	    List<Gives> gList;
 	    
 	    
 	    public List<Gives> getGives() {
