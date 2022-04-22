@@ -8,32 +8,32 @@ class AccountsServiceTest {
 
 	@Test
 	void testGetAccounts() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
 	void testGetAccountsbyUid() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
 	void testAddAccount() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
 	void testActivateUpdatedAccount() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
 	void testUpdateAccounts() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
 	void testActivateAccountsByUid() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
 
 }

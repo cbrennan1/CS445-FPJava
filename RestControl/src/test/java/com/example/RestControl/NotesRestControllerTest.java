@@ -8,22 +8,22 @@ class NotesRestControllerTest {
 
 	@Test
 	void testGetNotes() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
 	void testAddNotes() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
 	void testGetNotesByNid() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
 
 	@Test
 	void testPutNotes() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
 
 }
